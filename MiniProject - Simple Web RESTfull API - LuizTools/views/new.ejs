@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    
+    <form action="/new" method="POST">
+        <p>
+            <label>Nome: <input type="text" name="nome" value="<%= cliente.nome %>" ></input> </label>
+        </p>
+        <p>
+            <label>Idade: <input type="number" name="idade" value="<%= cliente.idade %>" ></input> </label>
+        </p>
+        <input type="hidden" name="id" value="<%= cliente._id %>" />
+        <input type="submit" value="Salvar"/>
+    </form>
+
+  </body>
+</html>

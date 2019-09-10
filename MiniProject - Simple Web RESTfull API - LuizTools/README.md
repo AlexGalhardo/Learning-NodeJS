@@ -1,0 +1,7 @@
+ - Postman
+    - GET -> http:// localhost:300/  # RETORNA HTML
+    - GET -> http://localhost:3000/clientes # RETORNA JSON COM DADOS CADASTRADOS
+    - GET -> http://localhost:3000/clientes/id_criptografado_aqui # RETORNA APENAS O JSON COM OS DADOS DO ID
+    - POST -> http://localhost:3000/new # ADICIONAR CHAVE E VALOR NOS CAMPOS DO POSTMAN, PARA ADICIONAR DADOS
+    - PUT -> http://localhost:3000/id_criptografado_aqui # ADICIONAR NO RAW DO POSTMAN, OS NOVOS DADOS QUE SERÃO ATUALIZADOS EM FORMATO JSON
+    - DELETE -> http://localhost:3000/clientes/id_criptografado_aqui # DELETA TODOS OS DADOS DE ACORDO COM O ID PASSADO

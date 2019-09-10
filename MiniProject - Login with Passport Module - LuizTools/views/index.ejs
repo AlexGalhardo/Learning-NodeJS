@@ -1,0 +1,63 @@
+<%- include top.ejs %>
+
+    <p>Welcome to <%= title %></p>
+    <div class="alert alert-info">
+      <%= qtd %> usuários cadastrados!
+    </div>
+    <table class="table table-bordered table-striped table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nome</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% 
+        if(docs) {
+          for(var i=0; i < docs.length; i++){
+            %>
+            <tr>
+              <td><a href="/edit/<%= docs[i]._id %>"><%= docs[i].username %></a></td>
+              <td>
+                  <form action="/delete/<%= docs[i]._id %>" method="POST">
+                    <input type="submit" value="X" class="btn btn-danger" />
+                  </form>
+              </td>
+            </tr>
+            <%
+          }
+        }
+      %>
+      </tbody>
+    </table>
+    <nav>
+        <ul class="pagination">
+          <%
+            for(var i=1; i <= qtdPaginas; i++){
+          %>
+              <li class="page-item"><a class="page-link" href="/index/<%= i %>">
+                <%= i %>
+              </a></li> 
+          <%
+          }
+          %>
+      </ul>
+    </nav>
+    <form action="/logoff" method="POST">
+      <div class="row">
+        <div class="col-sm-2">
+            <a href="/users/signup" class="btn btn-primary">Cadastrar</a>
+        </div>
+        <div class="col-sm-2">
+          <input type="submit" value="Logoff" class="btn btn-light form-control" />
+        </div>
+        <% if(profile === '2'){ %>
+        <div class="col-sm-2">
+          <a href="/reports" class="btn btn-light">Relatórios</a>
+        </div>
+        <% } %>
+
+      </div>
+    </form>
+      
+    <%- include bottom.ejs %>
