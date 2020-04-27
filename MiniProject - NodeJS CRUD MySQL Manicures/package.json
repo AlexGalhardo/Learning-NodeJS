@@ -1,0 +1,28 @@
+{
+  "name": "mongodb-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrieldarezzo/mongodb-sample.git"
+  },
+  "author": "Gabriel Darezzo <darezzo.gabriel@gmail.com> (https://inwork.com.br/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrieldarezzo/mongodb-sample/issues"
+  },
+  "homepage": "https://github.com/gabrieldarezzo/mongodb-sample#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
