@@ -1,23 +1,3 @@
-## References
- 
- - Courses
-    - [Curso NodeJS LuizTools](https://node.luiztools.com.br/)
-    - [Treinamento NodeBR.org](https://treinamento.nodebr.org/)
-    - [Udemy - The Complete Node.js Developer Course Andrew Mead](https://www.udemy.com/the-complete-nodejs-developer-course-2)
-    - [Udemy - The Modern GraphQL Bootcamp Andrew Mead](https://www.udemy.com/graphql-bootcamp/)
- - Sites
-    - [NodeBR.org](https://nodebr.org)
-    - [Luiz Tools](http://www.luiztools.com.br/categoria/desenvolvimento/nodejs/)
-    - [RocketSeat](https://rocketseat.com.br/)
-    - [Blog RisingStack](https://blog.risingstack.com/)
-    - [NodeSchool.io](https://nodeschool.io/)
-    - [W3Schools - NodeJS](https://www.w3schools.com/nodejs/default.asp)
- - Tutorials
-    - [Update NodeJS with NVM](https://github.com/creationix/nvm)
-    - [Getting Started with SSH](https://semaphoreci.com/community/tutorials/getting-started-with-ssh)
- - Books
-    - [Programação Web com Node.js: Completo, do Front-end ao Back-End - LuizTools](https://www.amazon.com.br/gp/product/B074RCRKSL/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B074RCRKSL&linkCode=as2&tag=programacaowebcomnodejs-20&linkId=a03a2a7cac2cbc72bc142da37b25b088)
-
 ## Best Practices
   
   - [ESLint](https://eslint.org/)
@@ -26,8 +6,53 @@
      - $ eslint script.js (Global)
      - $ node_modules/.bin/eslint script.js (Local) 
 
-## MongoDB
+## Example composer.json
+```json
+{
+    "name": "Example composer",
+    "version": "1.0.0",
+    "description": "NodeJS APP Descriptin",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js",
+        "start-server": "node app.js"
+    },
+    "author": "Alex Galhardo",
+    "license": "MIT",
+    "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.16.2",
+    "jimp": "^0.8.4",
+    "mongoose": "^5.7.1",
+    "multer": "^1.4.2",
+    "mustache-express": "^1.3.0",
+    "nodemailer": "^6.3.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "slug": "^1.1.0",
+    "uuid": "^3.3.3",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
+```
 
+## SQL
+- https://sequelize.org/
+- http://knexjs.org/
+
+## MongoDB
+ 
+  - [Mongoose](https://github.com/Automattic/mongoose)
   - Default Port: 27017
   - GUI Software
      - [Robo3T](https://robomongo.org/)
@@ -41,8 +66,29 @@
       ```
   - Cloud
       - [Mlab.com](https://mlab.com/)
-  - Modules
-      - [Mongoose](https://github.com/Automattic/mongoose)
+  - Instalando MongoDB no Linux
+   - https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+   - $ nano /etc/mongod.conf
+   - Porta Padrão: 27017
+   - dbPath: /var/lib/mongodb
+   - $ sudo service mondod start
+   - $ mongo
+   - $ sudo service mongod 
+- Instalando mongodb-compass
+   - https://www.mongodb.com/download-center/compass
+   - $ mongodb-compass
+- Começando Projeto e instalando dependências
+   - $ npm init -y
+   - $ npm install express --save
+   - $ npm install nodemon --save-dev 
+      - instalar localmente para desenvolvimento
+   - $ sudo npm install nodemon -g 
+      - instalar globalmente
+      - poderia ser $ node server.js, mas não recarrega automaticamente
+   - $ npm start
+   - $ npm install dotenv
+   - $ npm install mongoose --save
+      
 
 ## Docker
 
@@ -72,18 +118,6 @@
 
  - CLI 
     - $ node_modules/.bin/name_package comand
- - Videos
-    - [Yarn - An npm Alternative](https://mead.io/yarn/)
-    - [Debugging Node](https://mead.io/node-debugging/)
-    - [Publish Your Own NPM Module](https://mead.io/publish-an-npm-module/)
-    - [Diving into ESLint](https://mead.io/eslint/)
-    - [Parcel - A Better Module Bundler](https://mead.io/parcel/)
- - Usefull Modules
-    - [Lodash](https://www.npmjs.com/package/lodash)
-    - [Express](https://expressjs.com/)
-    - [SocketIO](https://socket.io)
-    - [Http-Server](https://www.npmjs.com/package/http-server)
-    - [Parcel](https://parceljs.org/)
  - Commands
     - Update Npm
     ```
@@ -118,6 +152,35 @@
     ```
     $ sudo npm install -g lite-server
     ```
+## Usefull Modules
+- JSON API => json-server: https://www.npmjs.com/package/json-server
+- DATA MANIPULATION => moment: https://www.npmjs.com/package/moment
+- HTTP REQUEST => request: https://www.npmjs.com/package/request
+- LODASH: https://www.npmjs.com/package/lodash
+- ASYNC: https://www.npmjs.com/package/async
+- COMMANDER => terminal: https://www.npmjs.com/package/commander
+- CHALK => terminal: https://www.npmjs.com/package/chalk
+- DEBUG => debug: https://www.npmjs.com/package/debug
+- SOCKETIO => https://www.npmjs.com/package/socket.io
+- PASSPORT => https://www.npmjs.com/package/passport
+   - PASSPORT-LOCAL => https://www.npmjs.com/package/passport-local
+   - PASSPORT-LOCAL-MONGOOSE => https://www.npmjs.com/package/passport-local-mongoose
+- NODEMAILER => https://www.npmjs.com/package/nodemailer
+- HAPI => http server: https://www.npmjs.com/package/@hapi/hapi
+- PUG => template engine: https://www.npmjs.com/package/pug
+- NODE MYSQL => https://www.npmjs.com/package/mysql
+- MORGAN => https://www.npmjs.com/package/morgan
+- RESTIFY => https://www.npmjs.com/package/restify
+- DOTENV => https://www.npmjs.com/package/dotenv
+- COOKIE-PARSER => https://www.npmjs.com/package/cookie-parser
+- UUID => https://www.npmjs.com/package/uuid
+- SLUG => https://www.npmjs.com/package/slug
+
+## HTTP Server
+- https://expressjs.com/
+
+## MVC
+- Framework AdonisJS: https://adonisjs.com/
 
 ## Microservices
 
@@ -128,9 +191,10 @@
  
 ## APIs
 
+ - https://github.com/googleapis/google-api-nodejs-client
  - Modules
     - [Restify](http://restify.com/)
- - Software
+ - GUI Software
     - [Postman](https://www.getpostman.com/)
     - [Insomnia](https://insomnia.rest/)
  - Headless CMS
@@ -149,9 +213,76 @@
   - DevOps
      - [Webinar DevOps com Ferramentas Atlassian 2018](https://www.youtube.com/watch?v=ND9knVaE260)
 
-## Heroku Deploy Reference
+## JWT 
+- https://www.luiztools.com.br/post/autenticacao-json-web-token-jwt-em-node-js-2/
+```js
+//index.js
+var http = require('http'); 
+const express = require('express') 
+const app = express() 
+var cookieParser = require('cookie-parser'); 
+const bodyParser = require('body-parser');
+var jwt = require('jsonwebtoken');
+const fs   = require('fs');
+const secret = "meu-segredo";//esse segredo do JWT seria uma config
 
- - [Dashboard Apps](https://dashboard.heroku.com/apps)
+app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.json());
+app.use(cookieParser()); 
+
+//rota protegida
+app.get('/clientes', verifyJWT, (req, res, next) => { 
+    console.log("Retornou todos clientes!");
+    res.status(200).json([{id:1,nome:'luiz'}]);
+}) 
+
+//rota de login
+app.post('/login', (req, res, next) => { 
+    if(req.body.user === 'luiz' && req.body.pwd === '123'){ 
+        //auth ok 
+        const id = 1; //esse id viria do banco de dados 
+        var privateKey  = fs.readFileSync('./private.key', 'utf8');
+        var token = jwt.sign({ id }, privateKey, { 
+            expiresIn: 300, // 5min 
+            algorithm:  "RS256" //SHA-256 hash signature
+        }); 
+        
+        console.log("Fez login e gerou token!");
+        return res.status(200).send({ auth: true, token: token }); 
+    }
+    
+    return res.status(401).send('Login inválido!'); 
+})    
+
+//rota de logout
+app.post('/logout', function(req, res) { 
+    console.log("Fez logout e cancelou o token!");
+    res.status(200).send({ auth: false, token: null }); 
+});
+
+//função que verifica se o JWT é ok
+function verifyJWT(req, res, next){ 
+    var token = req.headers['x-access-token']; 
+    if (!token) 
+        return res.status(401).send({ auth: false, message: 'Token não informado.' }); 
+    
+    var publicKey  = fs.readFileSync('./public.key', 'utf8');
+    jwt.verify(token, publicKey, {algorithm: ["RS256"]}, function(err, decoded) { 
+        if (err) 
+            return res.status(500).send({ auth: false, message: 'Token inválido.' }); 
+        
+        req.userId = decoded.id; 
+        console.log("User Id: " + decoded.id)
+        next(); 
+    }); 
+}    
+
+var server = http.createServer(app); 
+server.listen(3000);
+console.log("Servidor escutando na porta 3000...")
+```
+
+## Heroku Deploy Reference
  - [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
  - [Addon mLab MongoDB Heroku](https://devcenter.heroku.com/articles/mongolab)
  - [Deploying NodeJS app Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)
@@ -164,12 +295,6 @@
     - $ heroku login
     - $ heroku create
     - $ heroku rename your-new-url-name
-    - Update NodeJS Version
-       ```
-       "engines": {
-          "node": "8.1.1" # your nodejs version here
-       }
-       ```
     - [Create NanoProcfile](https://devcenter.heroku.com/articles/getting-started-with-nodejs#define-a-procfile)
        - $ nano Procfile
     - How to start application?
