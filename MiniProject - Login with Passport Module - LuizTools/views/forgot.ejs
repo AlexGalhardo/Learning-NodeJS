@@ -1,0 +1,17 @@
+<%- include top.ejs %>
+
+<div class="col-sm-6">
+    <form action="/users/forgot" method="POST">
+      <div class="form-group">
+        <label for="email">Digite o email de cadastro abaixo para receber novas credenciais de acesso:</label>
+        <input name="email" type="text" class="form-control" placeholder="Digite o seu e-mail" />
+      </div>
+      <input type="submit" value="Send" class="btn btn-primary" />
+    </form>
+    <hr />
+    <p>
+      Caso não possua cadastro <a href="/users/signup">clique aqui</a>.
+    </p>
+  </div>
+
+<%- include bottom.ejs %>
