@@ -1,898 +1,104 @@
-![nodejs1](https://user-images.githubusercontent.com/19540357/80406446-77888c00-889a-11ea-83be-f3ae038f82d9.png)
+# Referências
 
-![nodejs2](https://user-images.githubusercontent.com/19540357/80406450-78b9b900-889a-11ea-874c-8feaa4d6f3c8.png)
+## Install Ubuntu 
+- [https://snapcraft.io/node](https://snapcraft.io/node)
 
-![nodejs3](https://user-images.githubusercontent.com/19540357/80406461-7a837c80-889a-11ea-884c-4e984ddbe28f.png)
+## Commands
+- $ npm init
+- $ npm init -y
+- Global
+   - $ sudo npm install -g nodemon
+   - $ sudo npm install -g typescrypt 
+   - $ sudo npm install -g ts-node
+- Dependencies
+   - $ npm install mustache-express
+- DevDependencies
+   - $ npm install --save-dev @types/node
+   - $ npm install --save-dev @types/mustache-express
+   - $ npm install --save-dev @types/validator
+   - $ npm install --save-dev @types/express
 
-![nodejs4](https://user-images.githubusercontent.com/19540357/80406465-7c4d4000-889a-11ea-935a-0405a84a12f6.png)
-
-![nodejs5](https://user-images.githubusercontent.com/19540357/80406470-7e170380-889a-11ea-91bd-162a3aa7ab35.png)
-
-![nodejs6](https://user-images.githubusercontent.com/19540357/80406482-85d6a800-889a-11ea-826a-4d9ae2a52b79.png)
-
-![nodejs7](https://user-images.githubusercontent.com/19540357/80406484-866f3e80-889a-11ea-9d47-edd8a8d58d4f.png)
-
-![nodejs8](https://user-images.githubusercontent.com/19540357/80406486-8707d500-889a-11ea-9ec9-3cef53e5ddd2.png)
-
-![nodejs9](https://user-images.githubusercontent.com/19540357/80406488-88390200-889a-11ea-9a33-0e42edb2f5c8.png)
-
-![nodejs10](https://user-images.githubusercontent.com/19540357/80406491-88d19880-889a-11ea-8a5c-6e7e7e6ca09b.png)
-
-
-
-## Best Practices
-  
-  - [ESLint](https://eslint.org/)
-     - $ sudo npm install -g eslint
-     - $ eslint --init
-     - $ eslint script.js (Global)
-     - $ node_modules/.bin/eslint script.js (Local) 
-
-## Example composer.json
-```json
-{
-    "name": "Example composer",
-    "version": "1.0.0",
-    "description": "NodeJS APP Descriptin",
-    "main": "app.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon app.js",
-        "start-server": "node app.js"
-    },
-    "author": "Alex Galhardo",
-    "license": "MIT",
-    "dependencies": {
-    "cookie-parser": "^1.4.4",
-    "body-parser": "^1.19.0",
-    "dotenv": "^8.1.0",
-    "express": "^4.17.1",
-    "express-flash": "0.0.2",
-    "express-session": "^1.16.2",
-    "jimp": "^0.8.4",
-    "mongoose": "^5.7.1",
-    "multer": "^1.4.2",
-    "mustache-express": "^1.3.0",
-    "nodemailer": "^6.3.0",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^5.0.1",
-    "slug": "^1.1.0",
-    "uuid": "^3.3.3",
-    "fs": "0.0.1-security",
-    "jsonwebtoken": "^8.5.1"
-  },
-  "devDependencies": {
-    "nodemon": "^1.19.2"
-  }
-}
-```
-
-## SQL
-- https://sequelize.org/
-- http://knexjs.org/
-
-## MongoDB
- 
-  - [Mongoose](https://github.com/Automattic/mongoose)
-  - Default Port: 27017
-  - GUI Software
-     - [Robo3T](https://robomongo.org/)
-  - Books
-     - [MongoDB para Iniciantes: Um Guia Prático - LuizTools](https://www.amazon.com.br/dp/B077711577/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=mongodbparainiciantes-20&linkId=480584b61fd824cd277a41fc25d7bab5)
-  - Installing MongoDB Local in Ubuntu
-     - [DigitalOcean Tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04)
-     - [StackOverFlow Answer](https://stackoverflow.com/questions/5961145/changing-mongodb-data-store-directory?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
-      ```
-      $ mongod --dbpath /usr/local/mongodb-data
-      ```
-  - Cloud
-      - [Mlab.com](https://mlab.com/)
-  - Instalando MongoDB no Linux
-   - https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
-   - $ nano /etc/mongod.conf
-   - Porta Padrão: 27017
-   - dbPath: /var/lib/mongodb
-   - $ sudo service mondod start
-   - $ mongo
-   - $ sudo service mongod 
-- Instalando mongodb-compass
-   - https://www.mongodb.com/download-center/compass
-   - $ mongodb-compass
-- Começando Projeto e instalando dependências
-   - $ npm init -y
-   - $ npm install express --save
-   - $ npm install nodemon --save-dev 
-      - instalar localmente para desenvolvimento
-   - $ sudo npm install nodemon -g 
-      - instalar globalmente
-      - poderia ser $ node server.js, mas não recarrega automaticamente
-   - $ npm start
-   - $ npm install dotenv
-   - $ npm install mongoose --save
+## Tools
+- HTTP
+   - [https://expressjs.com/pt-br/](https://expressjs.com/pt-br/)
+- SQL
+   - [https://sequelize.org/](https://sequelize.org/)
+- MongoDB
+   - [https://mongoosejs.com/](https://mongoosejs.com/)
+- Validator
+   - [https://www.npmjs.com/package/validator](https://www.npmjs.com/package/validator)
+- Template Engine
+   - [https://github.com/janl/mustache.js](https://github.com/janl/mustache.js)
+   - [https://www.npmjs.com/package/mustache-express](https://www.npmjs.com/package/mustache-express)
+- Framework MVC
+   - [https://adonisjs.com/](https://adonisjs.com/)
+- Authentication
+   - [http://www.passportjs.org/](http://www.passportjs.org/)
+- Dates
+   - [https://www.npmjs.com/package/moment](https://www.npmjs.com/package/moment)
+- EMAIL SMTP
+   - [https://www.npmjs.com/package/nodemailer](https://www.npmjs.com/package/nodemailer)
+- Slug
+   - [https://www.npmjs.com/package/slug](https://www.npmjs.com/package/slug)
+- .env
+   - [https://www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
+- FAKE REST JSON API
+   - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
+- TypeScrypt
+   - $ sudo npm install -g typescript
+   - $ tsc --init
+   - $ npm install --save-dev @types/node
+   - $ tsc -w (ficar monitorando typescript)
+   - tsconfig.json 
+      - "outDir": "./dist",                              
+      - "rootDir": "./src", 
+      - "module": "commonjs",
+      - "moduleResolution": "node", 
       
 
-## Docker
 
- - Installing
-    - [Install Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository)
- - Tutorials
-    - [Tudo o que você precisa saber para rodar Node.js com Docker](https://walde.co/2016/08/30/tudo-que-voce-precisa-saber-para-rodar-sua-aplicacao-nodejs-com-docker/)
- - Criar nova instância Docker com MongoDB
-    - -e significa as portas que eu quero acessar da minha instancia do docker
-    - -d significa o nome da instancia do docker que eu quero usar
-    - ps mostra as instâncias ativas
-    - ps -a mostra as instâncias do docker não ativas
-    ```
-    $ sudo docker run --name mongodb -e 27017:27017 -d mongo
-    $ sudo docker ps
-    $ sudo coker ps -a
-    ```
- - Iniciar instancia do Docker com Mongodb
-    ```
-    $ sudo docker start mongodb
-    ```
- - Verificar se o MongoDB foi ativado corretamente dentro do Docker
-    - http://localhost:27017/
-    - It looks like you are trying to access MongoDB over HTTP on the native driver port.
 
-## NPM
+## Import/Export Modules
 
- - CLI 
-    - $ node_modules/.bin/name_package comand
- - Commands
-    - Update Npm
-    ```
-    $ npm install npm@latest -g
-    ```  
-    - Init project
-    ```
-    $ npm init -y
-    ```
-    - Install package
-    ```
-    $ npm install package_name
-    ```
-    - Update package
-    ```
-    $ npm update package_name
-    ```
-    - Fix Modules Vulnerabilities
-    ```
-    $ npm audit fix
-    ```
- - Browser Autoreload
-    - [BrowserSync](https://browsersync.io/)
-    ```
-    $ sudo npm install -g browser-sync
-    ```
-    - [Nodemon](https://nodemon.io/)
-    ```
-    $ sudo npm install -g nodemon
-    ```
-    - [Lite-Server](https://www.npmjs.com/package/lite-server)
-    ```
-    $ sudo npm install -g lite-server
-    ```
-## Usefull Modules
-- JSON API => json-server: https://www.npmjs.com/package/json-server
-- DATA MANIPULATION => moment: https://www.npmjs.com/package/moment
-- HTTP REQUEST => request: https://www.npmjs.com/package/request
-- LODASH: https://www.npmjs.com/package/lodash
-- ASYNC: https://www.npmjs.com/package/async
-- COMMANDER => terminal: https://www.npmjs.com/package/commander
-- CHALK => terminal: https://www.npmjs.com/package/chalk
-- DEBUG => debug: https://www.npmjs.com/package/debug
-- SOCKETIO => https://www.npmjs.com/package/socket.io
-- PASSPORT => https://www.npmjs.com/package/passport
-   - PASSPORT-LOCAL => https://www.npmjs.com/package/passport-local
-   - PASSPORT-LOCAL-MONGOOSE => https://www.npmjs.com/package/passport-local-mongoose
-- NODEMAILER => https://www.npmjs.com/package/nodemailer
-- HAPI => http server: https://www.npmjs.com/package/@hapi/hapi
-- PUG => template engine: https://www.npmjs.com/package/pug
-- NODE MYSQL => https://www.npmjs.com/package/mysql
-- MORGAN => https://www.npmjs.com/package/morgan
-- RESTIFY => https://www.npmjs.com/package/restify
-- DOTENV => https://www.npmjs.com/package/dotenv
-- COOKIE-PARSER => https://www.npmjs.com/package/cookie-parser
-- UUID => https://www.npmjs.com/package/uuid
-- SLUG => https://www.npmjs.com/package/slug
-
-## HTTP Server
-- https://expressjs.com/
-
-## MVC
-- Framework AdonisJS: https://adonisjs.com/
-
-<img width="631" alt="adonis_vs_laravel" src="https://user-images.githubusercontent.com/19540357/80345412-737b5080-883f-11ea-823d-246ea08dab25.png">
-
-## Microservices
-
- - Posts
-    - [Arquitetura de Micro Serviços em NodeJS e MongoDB - LuizTools](http://www.luiztools.com.br/post/arquitetura-de-micro-servicos-em-node-js-mongodb)
- - Videos
-    - [Webinar: Microservices - Sensedia](https://www.youtube.com/watch?v=Pl0Dccqjrao) 
- 
-## APIs
-
- - https://github.com/googleapis/google-api-nodejs-client
- - Modules
-    - [Restify](http://restify.com/)
- - GUI Software
-    - [Postman](https://www.getpostman.com/)
-    - [Insomnia](https://insomnia.rest/)
- - Headless CMS
-    - [strap.io](https://strapi.io/)
- - Sites
-    - [Online UUID Generator](https://www.uuidgenerator.net/)
- - Chrome Plugins
-    - [Restlet Client](https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm/related?hl=en)
-    - [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
- - YouTube
-    - [API Rest com Restify](https://www.youtube.com/watch?v=GzePIBuP_yA) 
-    - [Criando APIs com NodeJs](https://www.youtube.com/watch?v=wDWdqlYxfcw&list=PLHlHvK2lnJndvvycjBqQAbgEDqXxKLoqn&app=desktop)
-    - [Webinar: Os Fundamentos da Segurança de APIs - Sensedia](https://www.youtube.com/watch?v=h4A8HytL5ts)
-    - [Webinar Design de APIs RESTful - Sensedia](https://www.youtube.com/watch?v=psLrAsdHltQ)
-    - [Webinar: Guia prático de Gerenciamento de APIs - Sensedia](https://www.youtube.com/watch?v=L6jQO06PVCw)
-  - DevOps
-     - [Webinar DevOps com Ferramentas Atlassian 2018](https://www.youtube.com/watch?v=ND9knVaE260)
-
-## JWT 
-- https://www.luiztools.com.br/post/autenticacao-json-web-token-jwt-em-node-js-2/
-```js
-//index.js
-var http = require('http'); 
-const express = require('express') 
-const app = express() 
-var cookieParser = require('cookie-parser'); 
-const bodyParser = require('body-parser');
-var jwt = require('jsonwebtoken');
-const fs   = require('fs');
-const secret = "meu-segredo";//esse segredo do JWT seria uma config
-
-app.use(bodyParser.urlencoded({ extended: true })); 
-app.use(bodyParser.json());
-app.use(cookieParser()); 
-
-//rota protegida
-app.get('/clientes', verifyJWT, (req, res, next) => { 
-    console.log("Retornou todos clientes!");
-    res.status(200).json([{id:1,nome:'luiz'}]);
-}) 
-
-//rota de login
-app.post('/login', (req, res, next) => { 
-    if(req.body.user === 'luiz' && req.body.pwd === '123'){ 
-        //auth ok 
-        const id = 1; //esse id viria do banco de dados 
-        var privateKey  = fs.readFileSync('./private.key', 'utf8');
-        var token = jwt.sign({ id }, privateKey, { 
-            expiresIn: 300, // 5min 
-            algorithm:  "RS256" //SHA-256 hash signature
-        }); 
-        
-        console.log("Fez login e gerou token!");
-        return res.status(200).send({ auth: true, token: token }); 
-    }
-    
-    return res.status(401).send('Login inválido!'); 
-})    
-
-//rota de logout
-app.post('/logout', function(req, res) { 
-    console.log("Fez logout e cancelou o token!");
-    res.status(200).send({ auth: false, token: null }); 
-});
-
-//função que verifica se o JWT é ok
-function verifyJWT(req, res, next){ 
-    var token = req.headers['x-access-token']; 
-    if (!token) 
-        return res.status(401).send({ auth: false, message: 'Token não informado.' }); 
-    
-    var publicKey  = fs.readFileSync('./public.key', 'utf8');
-    jwt.verify(token, publicKey, {algorithm: ["RS256"]}, function(err, decoded) { 
-        if (err) 
-            return res.status(500).send({ auth: false, message: 'Token inválido.' }); 
-        
-        req.userId = decoded.id; 
-        console.log("User Id: " + decoded.id)
-        next(); 
-    }); 
-}    
-
-var server = http.createServer(app); 
-server.listen(3000);
-console.log("Servidor escutando na porta 3000...")
+### Older module.exports
+- Math.ts
+```ts
+function sum(x:number, y:number):number {
+ return x*y;
+}
+module.exports.sum = sum;
+```
+- index.ts
+```ts
+const Math = require('./Math');
+console.log(`SUM: ${Math.sum(n1,n2)}`);
 ```
 
-## Heroku Deploy Reference
- - [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
- - [Addon mLab MongoDB Heroku](https://devcenter.heroku.com/articles/mongolab)
- - [Deploying NodeJS app Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)
- - [Clear Build Cache](https://help.heroku.com/18PI5RSY/how-do-i-clear-the-build-cache)
- - Commands
-    - $ cd ~/project_directory
-    - $ git init
-    - $ git add .
-    - $ git commit -m 'first commit'
-    - $ heroku login
-    - $ heroku create
-    - $ heroku rename your-new-url-name
-    - [Create NanoProcfile](https://devcenter.heroku.com/articles/getting-started-with-nodejs#define-a-procfile)
-       - $ nano Procfile
-    - How to start application?
-       - web: npm run start
-       - $ git push heroku master
-       - $ heroku open
-       - $ heroku logs --tails
-
-## CHEATSHEET
-```js
-/* *******************************************************************************************
- * SYNOPSIS
- * http://nodejs.org/api/synopsis.html
- * ******************************************************************************************* */
-
-
-var http = require('http');
-
-// An example of a web server written with Node which responds with 'Hello World'.
-// To run the server, put the code into a file called example.js and execute it with the node program.
-http.createServer(function (request, response) {
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.end('Hello World\n');
-}).listen(8124);
-
-console.log('Server running at http://127.0.0.1:8124/');
-
-
-/* *******************************************************************************************
- * GLOBAL OBJECTS
- * http://nodejs.org/api/globals.html
- * ******************************************************************************************* */
-
-
-// In browsers, the top-level scope is the global scope.
-// That means that in browsers if you're in the global scope var something will define a global variable.
-// In Node this is different. The top-level scope is not the global scope; var something inside a Node module will be local to that module.
-
-__filename;  // The filename of the code being executed. (absolute path)
-__dirname;   // The name of the directory that the currently executing script resides in. (absolute path)
-module;      // A reference to the current module. In particular module.exports is used for defining what a module exports and makes available through require().
-exports;     // A reference to the module.exports that is shorter to type.
-process;     // The process object is a global object and can be accessed from anywhere. It is an instance of EventEmitter.
-Buffer;      // The Buffer class is a global type for dealing with binary data directly.
-
-
-/* *******************************************************************************************
- * CONSOLE
- * http://nodejs.org/api/console.html
- * ******************************************************************************************* */
-
-
-console.log([data], [...]);             // Prints to stdout with newline.
-console.info([data], [...]);            // Same as console.log.
-console.error([data], [...]);           // Same as console.log but prints to stderr.
-console.warn([data], [...]);            // Same as console.error.
-console.dir(obj);                       // Uses util.inspect on obj and prints resulting string to stdout.
-console.time(label);                    // Mark a time.
-console.timeEnd(label);                 // Finish timer, record output.
-console.trace(label);                   // Print a stack trace to stderr of the current position.
-console.assert(expression, [message]);  // Same as assert.ok() where if the expression evaluates as false throw an AssertionError with message.
-
-
-/* *******************************************************************************************
- * TIMERS
- * http://nodejs.org/api/timers.html
- * ******************************************************************************************* */
-
-
-setTimeout(callback, delay, [arg], [...]);   // To schedule execution of a one-time callback after delay milliseconds. Optionally you can also pass arguments to the callback.
-clearTimeout(t);                             // Stop a timer that was previously created with setTimeout().
-setInterval(callback, delay, [arg], [...]);  // To schedule the repeated execution of callback every delay milliseconds. Optionally you can also pass arguments to the callback.
-clearInterval(t);                            // Stop a timer that was previously created with setInterval().
-setImmediate(callback, [arg], [...]);        // To schedule the "immediate" execution of callback after I/O events callbacks and before setTimeout and setInterval.
-clearImmediate(immediateObject);             // Stop a timer that was previously created with setImmediate().
-
-unref();  // Allow you to create a timer that is active but if it is the only item left in the event loop, node won't keep the program running.
-ref();    // If you had previously unref()d a timer you can call ref() to explicitly request the timer hold the program open.
-
-
-/* *******************************************************************************************
- * MODULES
- * http://nodejs.org/api/modules.html
- * ******************************************************************************************* */
-
-
-var module = require('./module.js');    // Loads the module module.js in the same directory.
-module.require('./another_module.js');  // load another_module as if require() was called from the module itself.
-
-module.id;        // The identifier for the module. Typically this is the fully resolved filename.
-module.filename;  // The fully resolved filename to the module.
-module.loaded;    // Whether or not the module is done loading, or is in the process of loading.
-module.parent;    // The module that required this one.
-module.children;  // The module objects required by this one.
-
-exports.area = function (r) {
-  return Math.PI * r * r;
-};
-
-// If you want the root of your module's export to be a function (such as a constructor)
-// or if you want to export a complete object in one assignment instead of building it one property at a time,
-// assign it to module.exports instead of exports.
-module.exports = function(width) {
-  return {
-    area: function() {
-      return width * width;
-    }
-  };
+### Modern Object
+- Math.ts
+```ts
+function sum(x:number, y:number):number {
+ return x*y;
 }
-
-
-/* *******************************************************************************************
- * PROCESS
- * http://nodejs.org/api/process.html
- * ******************************************************************************************* */
-
-
-process.on('exit', function(code) {});              // Emitted when the process is about to exit
-process.on('uncaughtException', function(err) {});  // Emitted when an exception bubbles all the way back to the event loop. (should not be used)
-
-process.stdout;           // A writable stream to stdout.
-process.stderr;           // A writable stream to stderr.
-process.stdin;            // A readable stream for stdin.
-
-process.argv;             // An array containing the command line arguments.
-process.env;              // An object containing the user environment.
-process.execPath;         // This is the absolute pathname of the executable that started the process.
-process.execArgv;         // This is the set of node-specific command line options from the executable that started the process.
-
-process.arch;             // What processor architecture you're running on: 'arm', 'ia32', or 'x64'.
-process.config;           // An Object containing the JavaScript representation of the configure options that were used to compile the current node executable.
-process.pid;              // The PID of the process.
-process.platform;         // What platform you're running on: 'darwin', 'freebsd', 'linux', 'sunos' or 'win32'.
-process.title;            // Getter/setter to set what is displayed in 'ps'.
-process.version;          // A compiled-in property that exposes NODE_VERSION.
-process.versions;         // A property exposing version strings of node and its dependencies.
-
-process.abort();          // This causes node to emit an abort. This will cause node to exit and generate a core file.
-process.chdir(dir);       // Changes the current working directory of the process or throws an exception if that fails.
-process.cwd();            // Returns the current working directory of the process.
-process.exit([code]);     // Ends the process with the specified code. If omitted, exit uses the 'success' code 0.
-process.getgid();         // Gets the group identity of the process.
-process.setgid(id);       // Sets the group identity of the process.
-process.getuid();         // Gets the user identity of the process.
-process.setuid(id);       // Sets the user identity of the process.
-process.getgroups();      // Returns an array with the supplementary group IDs.
-process.setgroups(grps);  // Sets the supplementary group IDs.
-
-process.initgroups(user, extra_grp);  // Reads /etc/group and initializes the group access list, using all groups of which the user is a member.
-process.kill(pid, [signal]);          // Send a signal to a process. pid is the process id and signal is the string describing the signal to send.
-process.memoryUsage();                // Returns an object describing the memory usage of the Node process measured in bytes.
-process.nextTick(callback);           // On the next loop around the event loop call this callback.
-process.maxTickDepth;                 // Callbacks passed to process.nextTick will usually be called at the end of the current flow of execution, and are thus approximately as fast as calling a function synchronously.
-process.umask([mask]);                // Sets or reads the process's file mode creation mask.
-process.uptime();                     // Number of seconds Node has been running.
-process.hrtime();                     // Returns the current high-resolution real time in a [seconds, nanoseconds] tuple Array.
-
-
-/* *******************************************************************************************
- * CHILD PROCESS
- * http://nodejs.org/api/child_process.html
- * ******************************************************************************************* */
-
-
-// Node provides a tri-directional popen facility through the child_process module.
-// It is possible to stream data through a child's stdin, stdout, and stderr in a fully non-blocking way.
-
-ChildProcess;                                                 // Class. ChildProcess is an EventEmitter.
-
-child.stdin;                                                  // A Writable Stream that represents the child process's stdin
-child.stdout;                                                 // A Readable Stream that represents the child process's stdout
-child.stderr;                                                 // A Readable Stream that represents the child process's stderr.
-child.pid;                                                    // The PID of the child process
-child.connected;                                              // If .connected is false, it is no longer possible to send messages
-child.kill([signal]);                                         // Send a signal to the child process
-child.send(message, [sendHandle]);                            // When using child_process.fork() you can write to the child using child.send(message, [sendHandle]) and messages are received by a 'message' event on the child.
-child.disconnect();                                           // Close the IPC channel between parent and child, allowing the child to exit gracefully once there are no other connections keeping it alive.
-child_process.spawn(command, [args], [options]);              // Launches a new process with the given command, with command line arguments in args. If omitted, args defaults to an empty Array.
-child_process.exec(command, [options], callback);             // Runs a command in a shell and buffers the output.
-child_process.execFile(file, [args], [options], [callback]);  // Runs a command in a shell and buffers the output.
-child_process.fork(modulePath, [args], [options]);            // This is a special case of the spawn() functionality for spawning Node processes. In addition to having all the methods in a normal ChildProcess instance, the returned object has a communication channel built-in. 
-
-
-/* *******************************************************************************************
- * UTIL
- * http://nodejs.org/api/util.html
- * ******************************************************************************************* */
-
-
-// These functions are in the module 'util'. Use require('util') to access them.
-
-util.format(format, [...]);    // Returns a formatted string using the first argument as a printf-like format. (%s, %d, %j)
-util.debug(string);            // A synchronous output function. Will block the process and output string immediately to stderr.
-util.error([...]);             // Same as util.debug() except this will output all arguments immediately to stderr.
-util.puts([...]);              // A synchronous output function. Will block the process and output all arguments to stdout with newlines after each argument.
-util.print([...]);             // A synchronous output function. Will block the process, cast each argument to a string then output to stdout. (no newlines)
-util.log(string);              // Output with timestamp on stdout.
-util.inspect(object, [opts]);  // Return a string representation of object, which is useful for debugging. (options: showHidden, depth, colors, customInspect)
-util.isArray(object);          // Returns true if the given "object" is an Array. false otherwise.
-util.isRegExp(object);         // Returns true if the given "object" is a RegExp. false otherwise.
-util.isDate(object);           // Returns true if the given "object" is a Date. false otherwise.
-util.isError(object);          // Returns true if the given "object" is an Error. false otherwise.
-util.promisify(fn)             // Takes a function whose last argument is a callback and returns a version that returns promises.
-
-util.inherits(constructor, superConstructor);  // Inherit the prototype methods from one constructor into another.
-
-
-/* *******************************************************************************************
- * EVENTS
- * http://nodejs.org/api/events.html
- * ******************************************************************************************* */
-
-
-// All objects which emit events are instances of events.EventEmitter. You can access this module by doing: require("events");
-// To access the EventEmitter class, require('events').EventEmitter.
-// All EventEmitters emit the event 'newListener' when new listeners are added and 'removeListener' when a listener is removed.
-
-emitter.addListener(event, listener);        // Adds a listener to the end of the listeners array for the specified event.
-emitter.on(event, listener);                 // Same as emitter.addListener().
-emitter.once(event, listener);               // Adds a one time listener for the event. This listener is invoked only the next time the event is fired, after which it is removed.
-emitter.removeListener(event, listener);     // Remove a listener from the listener array for the specified event.
-emitter.removeAllListeners([event]);         // Removes all listeners, or those of the specified event.
-emitter.setMaxListeners(n);                  // By default EventEmitters will print a warning if more than 10 listeners are added for a particular event.
-emitter.listeners(event);                    // Returns an array of listeners for the specified event.
-emitter.emit(event, [arg1], [arg2], [...]);  // Execute each of the listeners in order with the supplied arguments. Returns true if event had listeners, false otherwise.
-
-EventEmitter.listenerCount(emitter, event);  // Return the number of listeners for a given event.
-
-
-/* *******************************************************************************************
- * STREAM
- * http://nodejs.org/api/stream.html
- * ******************************************************************************************* */
-
-
-// A stream is an abstract interface implemented by various objects in Node. For example a request to an HTTP server is a stream, as is stdout.
-// Streams are readable, writable, or both. All streams are instances of EventEmitter.
-
-// The Readable stream interface is the abstraction for a source of data that you are reading from.
-// In other words, data comes out of a Readable stream.
-// A Readable stream will not start emitting data until you indicate that you are ready to receive it.
-// Examples of readable streams include: http responses on the client, http requests on the server, fs read streams
-// zlib streams, crypto streams, tcp sockets, child process stdout and stderr, process.stdin.
-
-var readable = getReadableStreamSomehow();
-
-readable.on('readable', function() {});   // When a chunk of data can be read from the stream, it will emit a 'readable' event.
-readable.on('data', function(chunk) {});  // If you attach a data event listener, then it will switch the stream into flowing mode, and data will be passed to your handler as soon as it is available.
-readable.on('end', function() {});        // This event fires when there will be no more data to read.
-readable.on('close', function() {});      // Emitted when the underlying resource (for example, the backing file descriptor) has been closed. Not all streams will emit this.
-readable.on('error', function() {});      // Emitted if there was an error receiving data.
-
-// The read() method pulls some data out of the internal buffer and returns it. If there is no data available, then it will return null.
-// This method should only be called in non-flowing mode. In flowing-mode, this method is called automatically until the internal buffer is drained.
-readable.read([size]);
-
-readable.setEncoding(encoding);           // Call this function to cause the stream to return strings of the specified encoding instead of Buffer objects.
-readable.resume();                        // This method will cause the readable stream to resume emitting data events.
-readable.pause();                         // This method will cause a stream in flowing-mode to stop emitting data events.
-readable.pipe(destination, [options]);    // This method pulls all the data out of a readable stream, and writes it to the supplied destination, automatically managing the flow so that the destination is not overwhelmed by a fast readable stream.
-readable.unpipe([destination]);           // This method will remove the hooks set up for a previous pipe() call. If the destination is not specified, then all pipes are removed.
-readable.unshift(chunk);                  // This is useful in certain cases where a stream is being consumed by a parser, which needs to "un-consume" some data that it has optimistically pulled out of the source, so that the stream can be passed on to some other party.
-
-
-// The Writable stream interface is an abstraction for a destination that you are writing data to.
-// Examples of writable streams include: http requests on the client, http responses on the server, fs write streams,
-// zlib streams, crypto streams, tcp sockets, child process stdin, process.stdout, process.stderr.
-
-var writer = getWritableStreamSomehow();
-
-writable.write(chunk, [encoding], [callback]);  // This method writes some data to the underlying system, and calls the supplied callback once the data has been fully handled.
-writer.once('drain', write);                    // If a writable.write(chunk) call returns false, then the drain event will indicate when it is appropriate to begin writing more data to the stream.
-
-writable.end([chunk], [encoding], [callback]);  // Call this method when no more data will be written to the stream.
-writer.on('finish', function() {});             // When the end() method has been called, and all data has been flushed to the underlying system, this event is emitted.
-writer.on('pipe', function(src) {});            // This is emitted whenever the pipe() method is called on a readable stream, adding this writable to its set of destinations.
-writer.on('unpipe', function(src) {});          // This is emitted whenever the unpipe() method is called on a readable stream, removing this writable from its set of destinations.
-writer.on('error', function(src) {});           // Emitted if there was an error when writing or piping data.
-
-
-// Duplex streams are streams that implement both the Readable and Writable interfaces. See above for usage.
-// Examples of Duplex streams include: tcp sockets, zlib streams, crypto streams.
-
-// Transform streams are Duplex streams where the output is in some way computed from the input. They implement both the Readable and Writable interfaces. See above for usage.
-// Examples of Transform streams include: zlib streams, crypto streams.
-
-
-/* *******************************************************************************************
- * FILE SYSTEM
- * http://nodejs.org/api/fs.html
- * ******************************************************************************************* */
-
-
-// To use this module do require('fs').
-// All the methods have asynchronous and synchronous forms.
-
-fs.rename(oldPath, newPath, callback);  // Asynchronous rename. No arguments other than a possible exception are given to the completion callback.Asynchronous ftruncate. No arguments other than a possible exception are given to the completion callback.
-fs.renameSync(oldPath, newPath);        // Synchronous rename.
-
-fs.ftruncate(fd, len, callback);        // Asynchronous ftruncate. No arguments other than a possible exception are given to the completion callback.
-fs.ftruncateSync(fd, len);              // Synchronous ftruncate.
-fs.truncate(path, len, callback);       // Asynchronous truncate. No arguments other than a possible exception are given to the completion callback.
-fs.truncateSync(path, len);             // Synchronous truncate.
-
-fs.chown(path, uid, gid, callback);     // Asynchronous chown. No arguments other than a possible exception are given to the completion callback.
-fs.chownSync(path, uid, gid);           // Synchronous chown.
-fs.fchown(fd, uid, gid, callback);      // Asynchronous fchown. No arguments other than a possible exception are given to the completion callback.
-fs.fchownSync(fd, uid, gid);            // Synchronous fchown.
-fs.lchown(path, uid, gid, callback);    // Asynchronous lchown. No arguments other than a possible exception are given to the completion callback.
-fs.lchownSync(path, uid, gid);          // Synchronous lchown.
-
-fs.chmod(path, mode, callback);         // Asynchronous chmod. No arguments other than a possible exception are given to the completion callback.
-fs.chmodSync(path, mode);               // Synchronous chmod.
-fs.fchmod(fd, mode, callback);          // Asynchronous fchmod. No arguments other than a possible exception are given to the completion callback.
-fs.fchmodSync(fd, mode);                // Synchronous fchmod.
-fs.lchmod(path, mode, callback);        // Asynchronous lchmod. No arguments other than a possible exception are given to the completion callback.
-fs.lchmodSync(path, mode);              // Synchronous lchmod.
-
-fs.stat(path, callback);                // Asynchronous stat. The callback gets two arguments (err, stats) where stats is a fs.Stats object. 
-fs.statSync(path);                      // Synchronous stat. Returns an instance of fs.Stats.
-fs.lstat(path, callback);               // Asynchronous lstat. The callback gets two arguments (err, stats) where stats is a fs.Stats object. lstat() is identical to stat(), except that if path is a symbolic link, then the link itself is stat-ed, not the file that it refers to.
-fs.lstatSync(path);                     // Synchronous lstat. Returns an instance of fs.Stats.
-fs.fstat(fd, callback);                 // Asynchronous fstat. The callback gets two arguments (err, stats) where stats is a fs.Stats object. fstat() is identical to stat(), except that the file to be stat-ed is specified by the file descriptor fd.
-fs.fstatSync(fd);                       // Synchronous fstat. Returns an instance of fs.Stats.
-
-fs.link(srcpath, dstpath, callback);             // Asynchronous link. No arguments other than a possible exception are given to the completion callback.
-fs.linkSync(srcpath, dstpath);                   // Synchronous link.
-fs.symlink(srcpath, dstpath, [type], callback);  // Asynchronous symlink. No arguments other than a possible exception are given to the completion callback. The type argument can be set to 'dir', 'file', or 'junction' (default is 'file') and is only available on Windows (ignored on other platforms)
-fs.symlinkSync(srcpath, dstpath, [type]);        // Synchronous symlink.
-fs.readlink(path, callback);                     // Asynchronous readlink. The callback gets two arguments (err, linkString).
-fs.readlinkSync(path);                           // Synchronous readlink. Returns the symbolic link's string value.
-fs.unlink(path, callback);                       // Asynchronous unlink. No arguments other than a possible exception are given to the completion callback.
-fs.unlinkSync(path);                             // Synchronous unlink.
-
-fs.realpath(path, [cache], callback);     // Asynchronous realpath. The callback gets two arguments (err, resolvedPath).
-fs.realpathSync(path, [cache]);           // Synchronous realpath. Returns the resolved path.
-
-fs.rmdir(path, callback);                 // Asynchronous rmdir. No arguments other than a possible exception are given to the completion callback.
-fs.rmdirSync(path);                       // Synchronous rmdir.
-fs.mkdir(path, [mode], callback);         // Asynchronous mkdir. No arguments other than a possible exception are given to the completion callback. mode defaults to 0777.
-fs.mkdirSync(path, [mode]);               // Synchronous mkdir.
-fs.readdir(path, callback);               // Asynchronous readdir. Reads the contents of a directory. The callback gets two arguments (err, files) where files is an array of the names of the files in the directory excluding '.' and '..'.
-fs.readdirSync(path);                     // Synchronous readdir. Returns an array of filenames excluding '.' and '..'.
-fs.close(fd, callback);                   // Asynchronous close. No arguments other than a possible exception are given to the completion callback.
-fs.closeSync(fd);                         // Synchronous close.
-fs.open(path, flags, [mode], callback);   // Asynchronous file open.
-fs.openSync(path, flags, [mode]);         // Synchronous version of fs.open().
-fs.utimes(path, atime, mtime, callback);  // Change file timestamps of the file referenced by the supplied path.
-fs.utimesSync(path, atime, mtime);        // Synchronous version of fs.utimes().
-fs.futimes(fd, atime, mtime, callback);   // Change the file timestamps of a file referenced by the supplied file descriptor.
-fs.futimesSync(fd, atime, mtime);         // Synchronous version of fs.futimes().
-fs.fsync(fd, callback);                   // Asynchronous fsync. No arguments other than a possible exception are given to the completion callback.
-fs.fsyncSync(fd);                         // Synchronous fsync.
-
-fs.write(fd, buffer, offset, length, position, callback);  // Write buffer to the file specified by fd.
-fs.writeSync(fd, buffer, offset, length, position);        // Synchronous version of fs.write(). Returns the number of bytes written.
-fs.read(fd, buffer, offset, length, position, callback);   // Read data from the file specified by fd.
-fs.readSync(fd, buffer, offset, length, position);         // Synchronous version of fs.read. Returns the number of bytesRead.
-fs.readFile(filename, [options], callback);                // Asynchronously reads the entire contents of a file.
-fs.readFileSync(filename, [options]);                      // Synchronous version of fs.readFile. Returns the contents of the filename. If the encoding option is specified then this function returns a string. Otherwise it returns a buffer.
-
-fs.writeFile(filename, data, [options], callback);   // Asynchronously writes data to a file, replacing the file if it already exists. data can be a string or a buffer.
-fs.writeFileSync(filename, data, [options]);         // The synchronous version of fs.writeFile.
-fs.appendFile(filename, data, [options], callback);  // Asynchronously append data to a file, creating the file if it not yet exists. data can be a string or a buffer.
-fs.appendFileSync(filename, data, [options]);        // The synchronous version of fs.appendFile.
-fs.watch(filename, [options], [listener]);           // Watch for changes on filename, where filename is either a file or a directory. The returned object is a fs.FSWatcher. The listener callback gets two arguments (event, filename). event is either 'rename' or 'change', and filename is the name of the file which triggered the event.
-fs.exists(path, callback);                           // Test whether or not the given path exists by checking with the file system. Then call the callback argument with either true or false. (should not be used)
-fs.existsSync(path);                                 // Synchronous version of fs.exists. (should not be used)
-
-// fs.Stats: objects returned from fs.stat(), fs.lstat() and fs.fstat() and their synchronous counterparts are of this type.
-stats.isFile();
-stats.isDirectory()
-stats.isBlockDevice()
-stats.isCharacterDevice()
-stats.isSymbolicLink()  // (only valid with fs.lstat())
-stats.isFIFO()
-stats.isSocket()
-
-fs.createReadStream(path, [options]);   // Returns a new ReadStream object.
-fs.createWriteStream(path, [options]);  // Returns a new WriteStream object.
-
-
-/* *******************************************************************************************
- * PATH
- * http://nodejs.org/api/fs.html
- * ******************************************************************************************* */
-
-
-// Use require('path') to use this module.
-// This module contains utilities for handling and transforming file paths.
-// Almost all these methods perform only string transformations.
-// The file system is not consulted to check whether paths are valid.
-
-path.normalize(p);                    // Normalize a string path, taking care of '..' and '.' parts.
-path.join([path1], [path2], [...]);   // Join all arguments together and normalize the resulting path.
-path.resolve([from ...], to);         // Resolves 'to' to an absolute path.
-path.relative(from, to);              // Solve the relative path from 'from' to 'to'.
-path.dirname(p);                      // Return the directory name of a path. Similar to the Unix dirname command.
-path.basename(p, [ext]);              // Return the last portion of a path. Similar to the Unix basename command.
-path.extname(p);                      // Return the extension of the path, from the last '.' to end of string in the last portion of the path.
-
-path.sep;                             // The platform-specific file separator. '\\' or '/'.
-path.delimiter;                       // The platform-specific path delimiter, ';' or ':'.
-
-
-/* *******************************************************************************************
- * HTTP
- * http://nodejs.org/api/http.html
- * ******************************************************************************************* */
-
-
-// To use the HTTP server and client one must require('http').
-
-http.STATUS_CODES;                                             // A collection of all the standard HTTP response status codes, and the short description of each.
-http.request(options, [callback]);                             // This function allows one to transparently issue requests.
-http.get(options, [callback]);                                 // Set the method to GET and calls req.end() automatically.
-
-server = http.createServer([requestListener]);                 // Returns a new web server object. The requestListener is a function which is automatically added to the 'request' event.
-server.listen(port, [hostname], [backlog], [callback]);        // Begin accepting connections on the specified port and hostname.
-server.listen(path, [callback]);                               // Start a UNIX socket server listening for connections on the given path.
-server.listen(handle, [callback]);                             // The handle object can be set to either a server or socket (anything with an underlying _handle member), or a {fd: <n>} object.
-server.close([callback]);                                      // Stops the server from accepting new connections. 
-server.setTimeout(msecs, callback);                            // Sets the timeout value for sockets, and emits a 'timeout' event on the Server object, passing the socket as an argument, if a timeout occurs.
-
-server.maxHeadersCount;  // Limits maximum incoming headers count, equal to 1000 by default. If set to 0 - no limit will be applied.
-server.timeout;          // The number of milliseconds of inactivity before a socket is presumed to have timed out.
-
-server.on('request', function (request, response) { });        // Emitted each time there is a request.
-server.on('connection', function (socket) { });                // When a new TCP stream is established.
-server.on('close', function () { });                           // Emitted when the server closes.
-server.on('checkContinue', function (request, response) { });  // Emitted each time a request with an http Expect: 100-continue is received.
-server.on('connect', function (request, socket, head) { });    // Emitted each time a client requests a http CONNECT method.
-server.on('upgrade', function (request, socket, head) { });    // Emitted each time a client requests a http upgrade.
-server.on('clientError', function (exception, socket) { });    // If a client connection emits an 'error' event - it will forwarded here.
-
-request.write(chunk, [encoding]);                              // Sends a chunk of the body.
-request.end([data], [encoding]);                               // Finishes sending the request. If any parts of the body are unsent, it will flush them to the stream.
-request.abort();                                               // Aborts a request.
-request.setTimeout(timeout, [callback]);                       // Once a socket is assigned to this request and is connected socket.setTimeout() will be called.
-request.setNoDelay([noDelay]);                                 // Once a socket is assigned to this request and is connected socket.setNoDelay() will be called.
-request.setSocketKeepAlive([enable], [initialDelay]);          // Once a socket is assigned to this request and is connected socket.setKeepAlive() will be called.
-
-request.on('response', function(response) { });                // Emitted when a response is received to this request. This event is emitted only once.
-request.on('socket', function(socket) { });                    // Emitted after a socket is assigned to this request.
-request.on('connect', function(response, socket, head) { });   // Emitted each time a server responds to a request with a CONNECT method. If this event isn't being listened for, clients receiving a CONNECT method will have their connections closed.
-request.on('upgrade', function(response, socket, head) { });   // Emitted each time a server responds to a request with an upgrade. If this event isn't being listened for, clients receiving an upgrade header will have their connections closed.
-request.on('continue', function() { });                        // Emitted when the server sends a '100 Continue' HTTP response, usually because the request contained 'Expect: 100-continue'. This is an instruction that the client should send the request body.
-
-response.write(chunk, [encoding]);                             // This sends a chunk of the response body. If this merthod is called and response.writeHead() has not been called, it will switch to implicit header mode and flush the implicit headers.
-response.writeContinue();                                      // Sends a HTTP/1.1 100 Continue message to the client, indicating that the request body should be sent.
-response.writeHead(statusCode, [reasonPhrase], [headers]);     // Sends a response header to the request.
-response.setTimeout(msecs, callback);                          // Sets the Socket's timeout value to msecs. If a callback is provided, then it is added as a listener on the 'timeout' event on the response object.
-response.setHeader(name, value);                               // Sets a single header value for implicit headers. If this header already exists in the to-be-sent headers, its value will be replaced. Use an array of strings here if you need to send multiple headers with the same name.
-response.getHeader(name);                                      // Reads out a header that's already been queued but not sent to the client. Note that the name is case insensitive.
-response.removeHeader(name);                                   // Removes a header that's queued for implicit sending.
-response.addTrailers(headers);                                 // This method adds HTTP trailing headers (a header but at the end of the message) to the response.
-response.end([data], [encoding]);                              // This method signals to the server that all of the response headers and body have been sent; that server should consider this message complete. The method, response.end(), MUST be called on each response.
-
-response.statusCode;                                           // When using implicit headers (not calling response.writeHead() explicitly), this property controls the status code that will be sent to the client when the headers get flushed.
-response.headersSent;                                          // Boolean (read-only). True if headers were sent, false otherwise.
-response.sendDate;                                             // When true, the Date header will be automatically generated and sent in the response if it is not already present in the headers. Defaults to true.
-
-response.on('close', function () { });  // Indicates that the underlying connection was terminated before response.end() was called or able to flush.
-response.on('finish', function() { });  // Emitted when the response has been sent. 
-
-message.httpVersion;                    // In case of server request, the HTTP version sent by the client. In the case of client response, the HTTP version of the connected-to server.
-message.headers;                        // The request/response headers object.
-message.trailers;                       // The request/response trailers object. Only populated after the 'end' event.
-message.method;                         // The request method as a string. Read only. Example: 'GET', 'DELETE'.
-message.url;                            // Request URL string. This contains only the URL that is present in the actual HTTP request.
-message.statusCode;                     // The 3-digit HTTP response status code. E.G. 404.
-message.socket;                         // The net.Socket object associated with the connection.
-
-message.setTimeout(msecs, callback);    // Calls message.connection.setTimeout(msecs, callback).
-
-
-/* *******************************************************************************************
- * URL
- * http://nodejs.org/api/url.html
- * ******************************************************************************************* */
-
-
-// This module has utilities for URL resolution and parsing. Call require('url') to use it.
-
-url.parse(urlStr, [parseQueryString], [slashesDenoteHost]);  // Take a URL string, and return an object.
-url.format(urlObj);                                          // Take a parsed URL object, and return a formatted URL string.
-url.resolve(from, to);                                       // Take a base URL, and a href URL, and resolve them as a browser would for an anchor tag.
-
-
-/* *******************************************************************************************
- * QUERY STRING
- * http://nodejs.org/api/querystring.html
- * ******************************************************************************************* */
-
-
-// This module provides utilities for dealing with query strings. Call require('querystring') to use it.
-
-querystring.stringify(obj, [sep], [eq]);         // Serialize an object to a query string. Optionally override the default separator ('&') and assignment ('=') characters.
-querystring.parse(str, [sep], [eq], [options]);  // Deserialize a query string to an object. Optionally override the default separator ('&') and assignment ('=') characters.
-
-
-/* *******************************************************************************************
- * ASSERT
- * http://nodejs.org/api/assert.html
- * ******************************************************************************************* */
-
-
-// This module is used for writing unit tests for your applications, you can access it with require('assert').
-
-assert.fail(actual, expected, message, operator);     // Throws an exception that displays the values for actual and expected separated by the provided operator.
-assert(value, message); assert.ok(value, [message]);  // Tests if value is truthy, it is equivalent to assert.equal(true, !!value, message);
-assert.equal(actual, expected, [message]);            // Tests shallow, coercive equality with the equal comparison operator ( == ).
-assert.notEqual(actual, expected, [message]);         // Tests shallow, coercive non-equality with the not equal comparison operator ( != ).
-assert.deepEqual(actual, expected, [message]);        // Tests for deep equality.
-assert.notDeepEqual(actual, expected, [message]);     // Tests for any deep inequality.
-assert.strictEqual(actual, expected, [message]);      // Tests strict equality, as determined by the strict equality operator ( === )
-assert.notStrictEqual(actual, expected, [message]);   // Tests strict non-equality, as determined by the strict not equal operator ( !== )
-assert.throws(block, [error], [message]);             // Expects block to throw an error. error can be constructor, RegExp or validation function.
-assert.doesNotThrow(block, [message]);                // Expects block not to throw an error, see assert.throws for details.
-assert.ifError(value);                                // Tests if value is not a false value, throws if it is a true value. Useful when testing the first argument, error in callbacks.
-
-
-/* *******************************************************************************************
- * OS
- * http://nodejs.org/api/os.html
- * ******************************************************************************************* */
-
-
-// Provides a few basic operating-system related utility functions.
-// Use require('os') to access this module.
-
-os.tmpdir();             // Returns the operating system's default directory for temp files.
-os.endianness();         // Returns the endianness of the CPU. Possible values are "BE" or "LE".
-os.hostname();           // Returns the hostname of the operating system.
-os.type();               // Returns the operating system name.
-os.platform();           // Returns the operating system platform.
-os.arch();               // Returns the operating system CPU architecture.
-os.release();            // Returns the operating system release.
-os.uptime();             // Returns the system uptime in seconds.
-os.loadavg();            // Returns an array containing the 1, 5, and 15 minute load averages.
-os.totalmem();           // Returns the total amount of system memory in bytes.
-os.freemem();            // Returns the amount of free system memory in bytes.
-os.cpus();               // Returns an array of objects containing information about each CPU/core installed: model, speed (in MHz), and times (an object containing the number of milliseconds the CPU/core spent in: user, nice, sys, idle, and irq).
-os.networkInterfaces();  // Get a list of network interfaces.
-os.EOL;                  // A constant defining the appropriate End-of-line marker for the operating system.
-
-
-/* *******************************************************************************************
- * BUFFER
- * http://nodejs.org/api/buffer.html
- * ******************************************************************************************* */
-
-
-// Buffer is used to dealing with binary data
-// Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap
-
-Buffer.from(size);                                                  // Allocates a new buffer of size octets.
-Buffer.from(array);                                                 // Allocates a new buffer using an array of octets.
-Buffer.from(str, [encoding]);                                       // Allocates a new buffer containing the given str. encoding defaults to 'utf8'.
-
-Buffer.isEncoding(encoding);                                        // Returns true if the encoding is a valid encoding argument, or false otherwise.
-Buffer.isBuffer(obj);                                               // Tests if obj is a Buffer
-Buffer.concat(list, [totalLength]);                                 // Returns a buffer which is the result of concatenating all the buffers in the list together.
-Buffer.byteLength(string, [encoding]);                              // Gives the actual byte length of a string.
-
-buf.write(string, [offset], [length], [encoding]);                  // Writes string to the buffer at offset using the given encoding
-buf.toString([encoding], [start], [end]);                           // Decodes and returns a string from buffer data encoded with encoding (defaults to 'utf8') beginning at start (defaults to 0) and ending at end (defaults to buffer.length).
-buf.toJSON();                                                       // Returns a JSON-representation of the Buffer instance, which is identical to the output for JSON Arrays
-buf.copy(targetBuffer, [targetStart], [sourceStart], [sourceEnd]);  // Does copy between buffers. The source and target regions can be overlapped
-buf.slice([start], [end]);                                          // Returns a new buffer which references the same memory as the old, but offset and cropped by the start (defaults to 0) and end (defaults to buffer.length) indexes. Negative indexes start from the end of the buffer.   
-buf.fill(value, [offset], [end]);                                   // Fills the buffer with the specified value
-buf[index];                                                         // Get and set the octet at index
-buf.length;                                                         // The size of the buffer in bytes, Note that this is not necessarily the size of the contents
-
-buffer.INSPECT_MAX_BYTES;                                           // How many bytes will be returned when buffer.inspect() is called. This can be overridden by user modules.
-
+export default {
+	sum:sum, // sum
+};
+```
+- index.ts
+```ts
+import * as Math from './Math';
+console.log(`SOMA: ${Math.sum(n1,n2)}`);
+```
+
+### Modern Functions
+- Math.ts
+```ts
+export function sum(x:number, y:number):number {
+ return x*y;
+}
+```
+- index.ts
+```ts
+import { sum } from './Math';
+import * as Math from './Math';
 ```
