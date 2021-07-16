@@ -1,4 +1,4 @@
-# Referências
+# References
 
 ## Install Ubuntu 
 - [https://snapcraft.io/node](https://snapcraft.io/node)
