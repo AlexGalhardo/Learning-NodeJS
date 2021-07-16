@@ -82,7 +82,7 @@ server.listen(8080, () => { console.log('listening on 3001') });
 - Math.ts
 ```ts
 function sum(x:number, y:number):number {
- return x*y;
+ return x+y;
 }
 module.exports.sum = sum;
 ```
@@ -96,7 +96,7 @@ console.log(`SUM: ${Math.sum(n1,n2)}`);
 - Math.ts
 ```ts
 function sum(x:number, y:number):number {
- return x*y;
+ return x+y;
 }
 export default {
 	sum:sum, // sum
@@ -112,7 +112,7 @@ console.log(`SOMA: ${Math.sum(n1,n2)}`);
 - Math.ts
 ```ts
 export function sum(x:number, y:number):number {
- return x*y;
+ return x+y;
 }
 ```
 - index.ts
