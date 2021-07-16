@@ -1,6 +1,14 @@
+const fs = require('fs');
+const key = fs.readFileSync('./key.pem');
+const cert = fs.readFileSync('./cert.pem');
+
 const express = require('express')
 
+const https = require('https');
+
 const app = express()
+
+const server = https.createServer({key: key, cert: cert }, app);
 
 const passport = require('passport')
 
@@ -18,9 +26,9 @@ app.use(passport.initialize());
 passport.use(new facebookStrategy({
 
     // pull in our app id and secret from our auth.js file
-    clientID        : "########yourclientid############",
-    clientSecret    : "#############yourclientsecret##########",
-    callbackURL     : "http://localhost:5000/facebook/callback",
+    clientID        : "912789242785386",
+    clientSecret    : "bd66545c51f5861f24fa21e2dccbefe6",
+    callbackURL     : "http://localhost:8080/facebook/callback",
     profileFields: ['id', 'displayName', 'name', 'gender', 'picture.type(large)','email']
 
 },// facebook will send back the token and profile
@@ -115,6 +123,6 @@ app.get('/',(req,res) => {
     res.render("index")
 })
 
-app.listen(5000,() => {
-    console.log("App is listening on Port 5000")
+server.listen(8080,() => {
+    console.log("App is listening on Port 8080")
 })
