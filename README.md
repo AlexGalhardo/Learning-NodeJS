@@ -3,6 +3,10 @@
 ## Install Ubuntu 
 - [https://snapcraft.io/node](https://snapcraft.io/node)
 
+## Others
+- https://nodejs.dev/learn
+- https://erickwendel.teachable.com/
+
 ## Commands
 - $ npm init
 - $ npm init -y
@@ -30,6 +34,8 @@
 - Template Engine
    - [https://github.com/janl/mustache.js](https://github.com/janl/mustache.js)
    - [https://www.npmjs.com/package/mustache-express](https://www.npmjs.com/package/mustache-express)
+- Parser URL Encoded
+   - [https://www.npmjs.com/package/body-parser](https://www.npmjs.com/package/body-parser)
 - Framework MVC
    - [https://adonisjs.com/](https://adonisjs.com/)
 - Authentication
