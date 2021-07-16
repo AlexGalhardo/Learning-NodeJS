@@ -22,6 +22,20 @@
    - $ npm install --save-dev @types/validator
    - $ npm install --save-dev @types/express
 
+## Enforce HTTPS in Express Localhost
+- sudo openssl req -x509 -newkey rsa:2048 -keyout keytmp.pem -out cert.pem -days 365
+- sudo openssl rsa -in keytmp.pem -out key.pem
+```js
+const fs = require('fs');
+const key = fs.readFileSync('./key.pem');
+const cert = fs.readFileSync('./cert.pem');
+const express = require('express')
+const https = require('https');
+const app = express()
+const server = https.createServer({key: key, cert: cert }, app);
+server.listen(8080, () => { console.log('listening on 3001') });
+```
+
 ## Tools
 - HTTP
    - [https://expressjs.com/pt-br/](https://expressjs.com/pt-br/)
@@ -59,9 +73,7 @@
       - "outDir": "./dist",                              
       - "rootDir": "./src", 
       - "module": "commonjs",
-      - "moduleResolution": "node", 
-      
-
+      - "moduleResolution": "node"
 
 
 ## Import/Export Modules
