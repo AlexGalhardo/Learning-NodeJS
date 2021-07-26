@@ -6,14 +6,17 @@
 ## Others
 - https://nodejs.dev/learn
 - https://erickwendel.teachable.com/
+- https://www.udemy.com/course/the-complete-nodejs-developer-course-2/
+- https://www.udemy.com/course/nodejs-the-complete-guide/
 
 ## Commands
 - $ npm init
 - $ npm init -y
-- Global
+- Global Examples
    - $ sudo npm install -g nodemon
    - $ sudo npm install -g typescrypt 
    - $ sudo npm install -g ts-node
+   - $ sudo npm install -g express-generator
 - Dependencies
    - $ npm install mustache-express
 - DevDependencies
@@ -75,6 +78,16 @@ server.listen(8080, () => { console.log('listening on 3001') });
       - "module": "commonjs",
       - "moduleResolution": "node"
 
+## Services
+- SMS/Voice 
+   - [https://www.zenvia.com/](https://www.zenvia.com/)
+   - [https://www.twilio.com/](https://www.twilio.com/)
+- SMTP
+   - [https://www.mailgun.com/](https://www.mailgun.com/)
+   - [https://www.sendinblue.com/](https://www.sendinblue.com/)
+   - [https://sendgrid.com/](https://sendgrid.com/)
+   - [https://www.activecampaign.com/](https://www.activecampaign.com/)
+
 
 ## Import/Export Modules
 
@@ -118,5 +131,5 @@ export function sum(x:number, y:number):number {
 - index.ts
 ```ts
 import { sum } from './Math';
-import * as Math from './Math';
+console.log(`SOMA: ${sum(n1,n2)}`);
 ```
