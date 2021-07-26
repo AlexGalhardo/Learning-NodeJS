@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	 <title>Lista de Compras</title>
+	 <link rel=’stylesheet’ href=’/stylesheets/style.css’ />
+	</head>
+	
+	<body>
+
+	 <h1><%= title %></h1>
+
+	 <p>Preencha os dados abaixo para salvar um novo item.</p>
+
+	 <form action="/new" method="POST">
+		<p>
+			<label>Nome: <input type="text" name="nome" value="<%=
+		item.nome %>" /></label>
+		</p>
+		<p>
+			<label>Quantidade: <input type="number" name="quantidade"
+		value="<%= item.quantidade %>" /></label>
+		</p>
+		<p>
+			<input type="hidden" name="id" value="<%= item._id %>" />
+			<a href="/">Cancelar</a> | <input type="submit"
+		value="Salvar" />
+		</p>
+	</form>
+</body>
+</html>

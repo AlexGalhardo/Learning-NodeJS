@@ -8,6 +8,7 @@
 - https://erickwendel.teachable.com/
 - https://www.udemy.com/course/the-complete-nodejs-developer-course-2/
 - https://www.udemy.com/course/nodejs-the-complete-guide/
+- https://www.luiztools.com.br/
 
 ## Commands
 - $ npm init
@@ -17,6 +18,7 @@
    - $ sudo npm install -g typescrypt 
    - $ sudo npm install -g ts-node
    - $ sudo npm install -g express-generator
+   - $ sudo npm install -g lite-server
 - Dependencies
    - $ npm install mustache-express
 - DevDependencies
@@ -39,13 +41,13 @@ const server = https.createServer({key: key, cert: cert }, app);
 server.listen(8080, () => { console.log('listening on 3001') });
 ```
 
-## Tools
+## Modules/Packages
 - HTTP
    - [https://expressjs.com/pt-br/](https://expressjs.com/pt-br/)
-- SQL
+- CORS
+   - [https://www.npmjs.com/package/cors](https://www.npmjs.com/package/cors)
+- ORM
    - [https://sequelize.org/](https://sequelize.org/)
-- MongoDB
-   - [https://mongoosejs.com/](https://mongoosejs.com/)
 - Validator
    - [https://www.npmjs.com/package/validator](https://www.npmjs.com/package/validator)
 - Template Engine
@@ -67,16 +69,24 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [https://www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
 - FAKE REST JSON API
    - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
-- TypeScrypt
-   - $ sudo npm install -g typescript
-   - $ tsc --init
-   - $ npm install --save-dev @types/node
-   - $ tsc -w (ficar monitorando typescript)
-   - tsconfig.json 
-      - "outDir": "./dist",                              
-      - "rootDir": "./src", 
-      - "module": "commonjs",
-      - "moduleResolution": "node"
+
+## FREE APIs to Play
+- https://jsonplaceholder.typicode.com/
+- http://api.vagalume.com.br/docs/
+- https://pokeapi.co/
+- https://swapi.dev/
+
+
+## TypeScrypt
+- $ sudo npm install -g typescript
+- $ tsc --init
+- $ npm install --save-dev @types/node
+- $ tsc -w (ficar monitorando typescript)
+- tsconfig.json 
+   - "outDir": "./dist",                              
+   - "rootDir": "./src", 
+   - "module": "commonjs",
+   - "moduleResolution": "node"
 
 ## Services
 - SMS/Voice 
@@ -88,6 +98,51 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [https://sendgrid.com/](https://sendgrid.com/)
    - [https://www.activecampaign.com/](https://www.activecampaign.com/)
 
+## MongoDB
+- DEFAULT PORT: 27017
+- Packages/Modules
+   - [https://mongoosejs.com/](https://mongoosejs.com/)
+- As A Service
+   - [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
+- GUI Software:
+   - [https://robomongo.org/](https://robomongo.org/)
+   - [https://www.mongodb.com/pt-br/products/compass](https://www.mongodb.com/pt-br/products/compass)
+   - [https://nosqlbooster.com/](https://nosqlbooster.com/)
+   - https://github.com/mongo-express/mongo-express
+   - https://hub.docker.com/r/mongoclient/mongoclient/
+
+## Docker 
+- https://hub.docker.com/_/mongo-express
+- Fast Setup
+```
+sudo docker run \
+    --name mongodb \
+    -p 27017:27017 \
+    -e MONGO_INITDB_ROOT_USERNAME=alex \
+    -e MONGO_INITDB_ROOT_PASSWORD=mypassword \
+    -d \
+    mongo:4
+
+sudo docker run \
+    --name mongoclient \
+    -p 3000:3000 \
+    --link mongodb:mongodb \
+    -d \
+    mongoclient/mongoclient
+
+docker exec -it mongodb \
+    mongo --host localhost -u admin -p mypassword --authenticationDatabase admin \
+    --eval "db.getSiblingDB('database_test').createUser({user: 'alex', pwd: 'mypassword', roles: [{role: 'readWrite', db: 'database_test'}]})"
+```
+
+## Deploy
+- Heroku
+   - https://devcenter.heroku.com/articles/heroku-cli
+   - https://devcenter.heroku.com/articles/deploying-nodejs
+- AWS
+   - https://www.luiztools.com.br/post/deploy-de-aplicacao-nodejs-mysql-na-amazon-aws/
+- DigitalOcean
+   - https://www.luiztools.com.br/post/deploy-de-aplicacao-node-js-na-digital-ocean/
 
 ## Import/Export Modules
 
