@@ -18,6 +18,10 @@
 ## Commands
 - $ npm init
 - $ npm init -y
+- $ npm start  
+   - "scripts": { "start": "node index.js",
+- $ npm run dev 
+   - "scripts": { "dev": "nodemon index.js",
 - Global Examples
    - $ sudo npm install -g nodemon
    - $ sudo npm install -g typescrypt 
@@ -25,12 +29,17 @@
    - $ sudo npm install -g express-generator
    - $ sudo npm install -g lite-server
 - Dependencies
-   - $ npm install mustache-express
+   - $ npm install --save mustache-express
 - DevDependencies
    - $ npm install --save-dev @types/node
    - $ npm install --save-dev @types/mustache-express
    - $ npm install --save-dev @types/validator
    - $ npm install --save-dev @types/express
+
+## Latest Stable Version
+- $ sudo npm cache clean -f
+- $ sudo npm install -g n
+- $ sudo n stable
 
 ## Enforce HTTPS in Express Localhost
 - sudo openssl req -x509 -newkey rsa:2048 -keyout keytmp.pem -out cert.pem -days 365
@@ -78,7 +87,7 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [https://www.npmjs.com/package/compression](https://www.npmjs.com/package/compression)
 - Security HTTP Headers
    - [https://helmetjs.github.io/](https://helmetjs.github.io/)
-- FAKE REST JSON API
+- JSON-SERVER
    - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
 
 ## FREE APIs to Play
@@ -122,6 +131,15 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - https://github.com/mongo-express/mongo-express
    - https://hub.docker.com/r/mongoclient/mongoclient/
 
+## MySQL
+- DEFAULT PORT: 3306
+- Packages
+   - https://www.npmjs.com/package/mysql2
+- As A Service
+   - https://remotemysql.com/
+- Heroku
+   - https://devcenter.heroku.com/articles/cleardb
+
 ## Docker 
 - https://hub.docker.com/_/mongo-express
 
@@ -159,6 +177,9 @@ sudo docker exec -it mongodb \
    - SDK
       - https://aws.amazon.com/sdk-for-javascript/
    - Tutoriais
+      - https://aws.amazon.com/getting-started/hands-on/deploy-nodejs-web-app/
+      - https://www.luiztools.com.br/post/publicando-sua-aplicacao-node-js-no-amazon-lightsail-aws/
+      - https://www.luiztools.com.br/post/deploy-de-banco-mongodb-na-aws-com-atlas/
       - https://www.luiztools.com.br/post/deploy-de-aplicacao-nodejs-mysql-na-amazon-aws/
    - S3
       - https://aws.amazon.com/s3/
