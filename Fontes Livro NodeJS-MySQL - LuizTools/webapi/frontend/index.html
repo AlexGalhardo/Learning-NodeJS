@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo Bootstrap</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Exemplo Bootstrap</h1>
+                <span class="text-muted">Sistema para exemplificar uso de Bootstrap</span>
+            </div>
+        </div>
+        <hr />
+        <div id="divCadastro">
+            <h2>Cadastro</h2>
+            <div id="alertCadastro" class="alert alert-danger">
+                <strong>Erro!</strong> Nome é obrigatório!
+            </div>
+            <form id="frmCadastro" action="" method="" role="form">
+                <div class="form-group">
+                    <label>Nome: <input type="text" name="nome" class="form-control" /></label>
+                </div>
+                <div class="form-group">
+                    <label>Idade: <input type="number" name="idade" class="form-control" /></label>
+                </div>
+                <div class="form-group">
+                    <label>UF: <select name="uf" class="form-control">
+                    <option>RS</option>
+                    <option>SC</option>
+                    <option>PR</option>
+                    <!-- coloque os estados que quiser -->
+                    </select></label>
+                </div>
+                <div class="form-group">
+                    <input type="button" id="btnListar" value="Listar" class="btn btn-default"> | <input type="submit" value="Salvar" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+        <div id="divListagem">
+            <h2>Listagem</h2>
+            <div id="alertListagem" class="alert alert-success">
+                <strong>Successo!</strong> Blá blá blá!
+            </div>
+            <table cellspacing="0" class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td>Idade</td>
+                    <td>UF</td>
+                    <td>Ações</td>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td colspan="4">Nenhum cliente cadastrado.</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                    <td colspan="4">
+                        <input type="button" id="btnCadastrar" value="Cadastrar" class="btn btn-primary">
+                    </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

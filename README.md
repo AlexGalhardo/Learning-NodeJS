@@ -10,6 +10,11 @@
 - https://www.udemy.com/course/nodejs-the-complete-guide/
 - https://www.luiztools.com.br/
 
+## Resources
+- https://github.com/sindresorhus/awesome-nodejs
+- https://www.npmjs.com/package/insomnia-documenter
+- https://swagger.io/
+
 ## Commands
 - $ npm init
 - $ npm init -y
@@ -61,6 +66,8 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [http://www.passportjs.org/](http://www.passportjs.org/)
 - Dates
    - [https://www.npmjs.com/package/moment](https://www.npmjs.com/package/moment)
+- Logger Middleware
+   - [https://www.npmjs.com/package/morgan](https://www.npmjs.com/package/morgan)
 - EMAIL SMTP
    - [https://www.npmjs.com/package/nodemailer](https://www.npmjs.com/package/nodemailer)
 - Slug

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CRUD de Clientes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://bootswatch.com/5/cyborg/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+  <div class="container">
+      <h1>
+          <%= title %>
+      </h1>
+      <p>Preencha os dados abaixo para salvar o cliente.</p>
+      <div class="alert alert-danger col-sm-6" id="alertCadastro">
+        <strong>Erro!</strong> Nome é um dado obrigatório!
+      </div>
+      <form id="frmCadastro" action="<%= action %>" method="POST" role="form" class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label" for="nome">Nome: 
+                <input type="text" id="nome" name="nome" value="<%= result.nome %>" class="form-control" />
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="idade">Idade:
+                <input type="number" id="idade" name="idade" value="<%= result.idade %>" class="form-control" />
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="control-label">UF:
+              <select name="uf" class="form-control">
+              <% const s = "selected" %>
+              <option <% if(result.uf === "RS") { %><%= s %><% } %>>RS</option>
+              <option <% if(result.uf === "SC") { %><%= s %><% } %>>SC</option>
+              <option <% if(result.uf === "PR") { %><%= s %><% } %>>PR</option>
+              <!-- coloque os estados que quiser -->
+              </select>
+            </label>
+          </div>
+          <div class="form-group">
+            <a href="/" class="btn btn-default">Cancelar</a> <input type="submit" value="Salvar" class="btn btn-primary" />
+          </div>
+      </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="/js/scripts-new.js"></script>
+  </body>
+</html>
