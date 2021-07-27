@@ -236,3 +236,152 @@ export function sum(x:number, y:number):number {
 import { sum } from './Math';
 console.log(`SOMA: ${sum(n1,n2)}`);
 ```
+
+
+## JSON SERVER FAST REST API
+- reference: https://www.fabricadecodigo.com/json-server/
+- $ sudo npm install -g json-server
+- create db.json
+```json
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Hambúrguer",
+      "descricao": "Pão, bife de hambúrguer 90g, salada e batata.",
+      "preco": 8.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 2,
+      "nome": "X-Búrguer",
+      "descricao": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, salada e batata.",
+      "preco": 10.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 3,
+      "nome": "X-Bacon",
+      "descricao": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
+      "preco": 12.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 4,
+      "nome": "X-Tudo",
+      "descricao": "Pão, 2 bifes de hambúrguer 90g, 2 fatias de queijo, 4 fatias de bacon, salada e batata.",
+      "preco": 14.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 5,
+      "nome": "Coca cola 350ml",
+      "descricao": "",
+      "preco": 5.5,
+      "categoria_id": 2
+    },
+    {
+      "id": 6,
+      "nome": "Coca cola 600ml",
+      "descricao": "",
+      "preco": 7.5,
+      "categoria_id": 2
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Hambúrgueres"
+    },
+    {
+      "id": 2,
+      "nome": "Refrigerantes"
+    }
+  ]
+}
+```
+- $ json-server --watch db.json
+<table>
+<thead>
+<tr>
+<th>Request</th>
+<th>URL</th>
+<th>Detalhes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/produtos</td>
+<td>Busca todos os produtos</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/produtos/1</td>
+<td>Busca um produto</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/produtos</td>
+<td>Salva um produto</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/produtos/1</td>
+<td>Atualiza dos os dados do produto</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>/produtos/1</td>
+<td>Atualiza parte dos dados do produto</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/produtos/1</td>
+<td>Remove um produto</td>
+</tr>
+</tbody>
+</table>
+
+- GET ALL PRODUTOS
+   - GET http://localhost:3000/produtos/
+- GET PRODUCT BY ID
+   - GET http://localhost:3000/produtos/1
+- CREATE PRODUCT
+   - POST http://localhost:3000/produtos/
+   ```json
+   // Content-Type: application/json
+   {
+       "nome": "Hambúrguer de frango",
+       "descricao": "Pão, bife de hambúrguer 90g de frango, salada e batata.",
+       "preco": 9.5,
+       "categoria_id": 1
+   }
+   ```
+- UPDATE PRODUCT BY ID
+   - PUT http://localhost:3000/produtos/1
+   ```json
+   // Content-Type: application/json
+   {
+       "nome": "Hambúrguer de frango",
+       "descricao": "Pão, bife de hambúrguer 90g de frango, salada e batata.",
+       "preco": 10.5,
+       "categoria_id": 1
+   }
+   ```
+- UPDATE SPECIFIC ITEM IN PRODUCT BY ID
+   - PATCH http://localhost:3000/produtos/1
+   ```json
+   // Content-Type: application/json
+   {
+       "nome": "Hambúrguer de frango artezanal"
+   }
+   ```
+- DELETE PRODUCT BY ID
+   - DELETE http://localhost:3000/produtos/1
+- FILTER PRODUCTS BY URL
+   - GET http://localhost:3000/produtos?nome=X-Búrguer
+- PAGINATION
+   - GET http://localhost:3000/produtos/?_page=1&_limit=2
+- ORDER BY LIMIT/OFFSET
+   - GET http://localhost:3000/produtos/?_sort=nome&_order=desc
