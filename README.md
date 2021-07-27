@@ -120,7 +120,8 @@ server.listen(8080, () => { console.log('listening on 3001') });
 
 ## Docker 
 - https://hub.docker.com/_/mongo-express
-- Fast Setup
+
+#### Fast Setup MongoDB + MongoClient 
 ```
 sudo docker run \
     --name mongodb \
@@ -137,9 +138,13 @@ sudo docker run \
     -d \
     mongoclient/mongoclient
 
-docker exec -it mongodb \
-    mongo --host localhost -u admin -p mypassword --authenticationDatabase admin \
-    --eval "db.getSiblingDB('database_test').createUser({user: 'alex', pwd: 'mypassword', roles: [{role: 'readWrite', db: 'database_test'}]})"
+sudo docker exec -it mongodb \
+    mongo --host localhost -u admin -p mypassword 
+    --authenticationDatabase admin \
+    --eval "db.getSiblingDB('database_test').createUser(
+      {user: 'alex', pwd: 'mypassword', 
+      roles: [{role: 'readWrite', db: 'database_test'}]}
+   )"
 ```
 
 ## Deploy
@@ -153,7 +158,7 @@ docker exec -it mongodb \
 
 ## Import/Export Modules
 
-### Older module.exports
+#### Older module.exports
 - Math.ts
 ```ts
 function sum(x:number, y:number):number {
@@ -167,7 +172,7 @@ const Math = require('./Math');
 console.log(`SUM: ${Math.sum(n1,n2)}`);
 ```
 
-### Modern Object
+#### Modern Object
 - Math.ts
 ```ts
 function sum(x:number, y:number):number {
@@ -183,7 +188,7 @@ import * as Math from './Math';
 console.log(`SOMA: ${Math.sum(n1,n2)}`);
 ```
 
-### Modern Functions
+#### Modern Functions
 - Math.ts
 ```ts
 export function sum(x:number, y:number):number {
