@@ -74,6 +74,10 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [https://www.npmjs.com/package/slug](https://www.npmjs.com/package/slug)
 - .env
    - [https://www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
+- Assets Compression
+   - [https://www.npmjs.com/package/compression](https://www.npmjs.com/package/compression)
+- Security HTTP Headers
+   - [https://helmetjs.github.io/](https://helmetjs.github.io/)
 - FAKE REST JSON API
    - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
 
@@ -152,9 +156,20 @@ sudo docker exec -it mongodb \
    - https://devcenter.heroku.com/articles/heroku-cli
    - https://devcenter.heroku.com/articles/deploying-nodejs
 - AWS
-   - https://www.luiztools.com.br/post/deploy-de-aplicacao-nodejs-mysql-na-amazon-aws/
+   - SDK
+      - https://aws.amazon.com/sdk-for-javascript/
+   - Tutoriais
+      - https://www.luiztools.com.br/post/deploy-de-aplicacao-nodejs-mysql-na-amazon-aws/
+   - S3
+      - https://aws.amazon.com/s3/
+      - https://www.npmjs.com/package/multer-s3
+      - https://www.npmjs.com/package/s3-proxy
+
 - DigitalOcean
    - https://www.luiztools.com.br/post/deploy-de-aplicacao-node-js-na-digital-ocean/
+- Articles
+   - https://blog.risingstack.com/node-js-logging-tutorial/
+   - https://expressjs.com/pt-br/advanced/best-practice-security.html
 
 ## Import/Export Modules
 
