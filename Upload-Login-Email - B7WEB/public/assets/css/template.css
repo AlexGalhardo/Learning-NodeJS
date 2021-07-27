@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  background-color: #eee;
+  margin: 0;
+}
+header {
+  background-color: #ddd;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+header h1 {
+  text-align: center;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  padding: 10px;
+}
+.warning {
+  border: 2px solid #5555ff;
+  background-color: #0000ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.post {
+  width: 300px;
+  display: inline-block;
+  box-shadow: 0px 0px 5px #999;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.post img {
+  max-width: 100%;
+}
+
+form {
+  margin: 20px;
+}
+label {
+  display: inline-block;
+  margin: 5px 0;
+}
+input,
+textarea {
+  display: block;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  outline: 0;
+  resize: none;
+  margin-top: 10px;
+  width: 400px;
+}
+textarea {
+  height: 200px;
+}
+input[type='submit']:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+.tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.tags .tag {
+  padding: 10px;
+}
+.tag.selected a {
+  color: #ff0000;
+}

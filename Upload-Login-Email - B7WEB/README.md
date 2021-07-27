@@ -1,0 +1,33 @@
+- Instalando MongoDB no Linux
+   - https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+   - $ nano /etc/mongod.conf
+   - Porta Padrão: 27017
+   - dbPath: /var/lib/mongodb
+   - $ sudo service mondod start
+   - $ mongo
+   - $ sudo service mongod 
+- Instalando mongodb-compass
+   - https://www.mongodb.com/download-center/compass
+   - $ mongodb-compass
+
+- Começando Projeto e instalando dependências
+   - $ npm init -y
+   - $ npm install express --save
+   - $ npm install nodemon --save-dev 
+      - instalar localmente para desenvolvimento
+   - $ sudo npm install nodemon -g 
+      - instalar globalmente
+   - poderia ser $ node server.js, mas não recarrega automaticamente
+   - $ npm start
+   - $ npm install dotenv
+   - $ npm install mongoose --save
+
+- http://localhost:7777/?nome=alex&last=galhardo
+   - $ npm install mustache-express --save
+   - $ npm install cookie-parser express-session express-flash --save
+   - $ npm install slug --save
+   - $ npm install multer jimp uuid --save
+   - $ npm install passport passport-local passport-local-mongoose --save
+
+- $ npm install nodemailer --save
+   - service de stmp recomendado: https://mailtrap.io

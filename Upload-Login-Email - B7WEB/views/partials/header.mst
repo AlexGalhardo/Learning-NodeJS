@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{#header_title}}
+		<title>{{header_title}}</title>
+	{{/header_title}}
+	{{^header_title}}
+	<title>{{h.defaultHeaderTitle}}</title>
+	{{/header_title}}
+	<link rel="stylesheet" href="/assets/css/template.css">
+</head>
+<body>
+	<header>
+		<h1>CABEÇALHO HEADER.MST</h1>
+		{{#userLogged}}
+			Olá, <a href="/profile">{{userLogged.name}}</a>!
+		{{/userLogged}}
+		<h3>{{header_teste_padrao}}</h3>
+		<hr>
+		<ul>
+			{{#h.menu}}
+			<li><a href="{{slug}}">{{name}}</a></li>
+			{{/h.menu}}
+		</ul>
+	</header>
+
+
+	<div class="post">
+		{{#flashes}}
+				{{#success}}
+					<div class="warning">{{.}}</div>
+				{{/success}}
+				{{#error}}
+					<div class="warning">{{.}}</div>
+				{{/error}}
+				{{#info}}
+					<div class="warning">{{.}}</div>
+				{{/info}}
+		{{/flashes}}
+	</div>

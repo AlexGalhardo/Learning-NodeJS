@@ -1,0 +1,63 @@
+{{> header}}
+
+<h1>SEJA BEM VINDO AO TEMPLATE MUSTACHE {{home_title}}</h1>
+
+<!--
+{{#mostrar}}
+<p>Nome é: {{nome}}</p>
+<p>Last name é: {{last_name}}</p>
+<p>Idade é: {{idade}}</p>
+{{/mostrar}}
+
+<ul>
+	{{#ingredientes}}
+	<li>{{nome}} - quantidade: {{qt}}</li>
+	{{/ingredientes}}
+</ul>
+{{^ingredientes}}
+<p>Não existem ingredientes cadastrados!</p>
+{{/ingredientes}}
+
+<hr>
+
+<ul>
+	{{#interesses}}
+	<li>{{.}}</li>
+	{{/interesses}}
+</ul>
+
+<hr>
+
+{{texto_puro}}
+<br>
+{{{texto_html}}}
+
+{{! esse é um comentário }}
+
+<hr>
+<h5>USUÁRIO LOGADO MIDDLEWARE: {{userInfo.name}}</h5>
+
+-->
+
+<div class="tags">
+	{{#tags}}
+		<div class="tag {{class}}"><a href="/home/?t={{_id}}">{{_id}} | {{count}}</a></div>
+	{{/tags}}
+</div>
+
+TAG: {{tag}}
+
+<h3>Mostrando todos os posts do mongodb aqui</h3>
+	{{#posts}}
+		<div class="post">
+			{{#photo}}
+				<img src="/media/{{photo}}">
+			{{/photo}}
+			<h3><a href="/post/{{slug}}">{{title}}</a></h3>
+			<small>Autor: {{author.name}}</small>
+			<p>{{body}}</p>
+			{{#userLogged}}
+				<a href="/post/{{slug}}/edit">[ Editar ]</a>
+			{{/userLogged}}
+		</div>
+	{{/posts}}

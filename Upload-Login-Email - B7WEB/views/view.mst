@@ -1,0 +1,9 @@
+{{> header}}
+
+<img src="/media/{{post.photo}}">
+
+<h1>{{post.title}}</h1>
+
+<article>{{post.body}}</article>
+
+<p>Tags: {{post.tags}}</p>
