@@ -306,8 +306,8 @@ console.log(`SOMA: ${sum(n1,n2)}`);
 }
 ```
 - $ json-server --watch db.json
-<table>
 
+<table>
 <thead>
 <tr>
 <th>Request</th>
@@ -369,7 +369,7 @@ console.log(`SOMA: ${sum(n1,n2)}`);
 </tr>
 <tr>
 <td>DELETE</td>
-<td>http://localhost:3000/produtos/1</td>
+<td>http://localhost:3000/products/1</td>
 <td>Delete a product by ID</td>
 </tr>
 <tr>
@@ -384,8 +384,8 @@ console.log(`SOMA: ${sum(n1,n2)}`);
 </tr>
 <tr>
 <td>GET</td>
-<td>http://localhost:3000/produtos/?_sort=nome&_order=desc</td>
-<td>Get products by order by</td>
+<td>http://localhost:3000/products/?_sort=nome&_order=desc</td>
+<td>Get products order by</td>
 </tr>
 </tbody>
 </table>
@@ -397,7 +397,7 @@ console.log(`SOMA: ${sum(n1,n2)}`);
 const fetch = require('node-fetch');
 
 const API_URL = 'http://localhost:3000';
-const ENDPOINT = 'produtos';
+const ENDPOINT = 'products';
 
 // --------- GET
 fetch(`${API_URL}/${ENDPOINT}`, {
