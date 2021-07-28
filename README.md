@@ -244,6 +244,8 @@ console.log(`SOMA: ${sum(n1,n2)}`);
 
 ## JSON SERVER FAST REST API
 - $ sudo npm install -g json-server
+- Change PORT
+   - json-server --watch db.json --port 3004
 - create db.json
 ```json
 {
@@ -252,42 +254,42 @@ console.log(`SOMA: ${sum(n1,n2)}`);
       "id": 1,
       "name": "Sushi",
       "description": "A melhor comida que existe.",
-      "preco": 8.5,
+      "price": 8.5,
       "category_id": 1
     },
     {
       "id": 2,
       "name": "Batata Frita",
       "description": "Só o Cristiano Ronaldo não gosta.",
-      "preco": 10.5,
+      "price": 10.5,
       "category_id": 1
     },
     {
       "id": 3,
       "name": "X-Tudo",
       "description": "Melhor lanche que existe.",
-      "preco": 12.5,
+      "price": 12.5,
       "category_id": 1
     },
     {
       "id": 4,
       "name": "Tubaina",
       "description": "Os clássicos a gente nunca esquece.",
-      "preco": 14.5,
+      "price": 14.5,
       "category_id": 2
     },
     {
       "id": 5,
       "name": "Koka Kola",
       "description": "Refrigerante que faz mal.",
-      "preco": 5.5,
+      "price": 5.5,
       "category_id": 2
     },
     {
       "id": 6,
       "name": "Dollynho",
       "description": "Seu amiguinho, vamos brincar?",
-      "preco": 7.5,
+      "price": 7.5,
       "category_id": 2
     }
   ],
@@ -387,3 +389,119 @@ console.log(`SOMA: ${sum(n1,n2)}`);
 </tr>
 </tbody>
 </table>
+
+
+### Exampe with Node-Fetch
+- $ npm install node-fetch
+```js
+const fetch = require('node-fetch');
+
+const API_URL = 'http://localhost:3000';
+const ENDPOINT = 'produtos';
+
+// --------- GET
+fetch(`${API_URL}/${ENDPOINT}`, {
+  "method": "GET"
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+
+
+// --------- POST
+const body = {
+    "name": "New item adicionado com NODEJS",
+    "description": "npm init e tals",
+    "price": 19.90,
+    "category_id": 1
+};
+fetch(`${API_URL}/${ENDPOINT}`, {
+     method: 'POST',
+     body:    JSON.stringify(body),
+     headers: { 'Content-Type': 'application/json' },
+ })
+ .then(res => res.json())
+ .then(json => console.log(json));
+
+
+// --------- PUT
+const body = {
+    "name": "PRODUTO 8 ATUALIZADO",
+    "description": "description atualized",
+    "price": 59.90,
+    "category_id": 2
+};
+
+const product_id = 8;
+
+fetch(`${API_URL}/${ENDPOINT}/${product_id}`, {
+  method: 'PUT',
+  body:    JSON.stringify(body),
+  headers: { 'Content-Type': 'application/json' },
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+
+
+// --------- PATCH
+const body = {
+    "name": "Item 12 nome atualizado",
+    "price": 39.90,
+};
+
+const product_id_to_patch = 12;
+
+fetch(`${API_URL}/${endpoint}/${product_id_to_patch}`, {
+    method: 'PATCH',
+    body:    JSON.stringify(body),
+    headers: { 'Content-Type': 'application/json' },
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+
+
+// --------- DELETE
+const product_id_to_delete = 3;
+fetch(`${API_URL}/${ENDPOINT}/${product_id_to_delete}`, {
+  method: 'DELETE'
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+
+
+// --------- FILTER BY NAME
+const filterName = 'Sushi';
+
+fetch(`${API_URL}/${ENDPOINT}?name=${filterName}`, {
+  "method": "GET"
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err)); 
+
+
+// ---------- ORDER BY
+const ORDER = 'DESC';
+const SORT = 'preco';
+
+fetch(`${API_URL}/${ENDPOINT}/?_sort=${SORT}&_order=${ORDER}`, {
+  "method": "GET"
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+
+
+// ----------- PAGINATION
+let page = 3;
+let limit = 4;
+fetch(`${API_URL}/${ENDPOINT}/?_page=${page}&_limit=${limit}`, {
+  "method": "GET"
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
+```
