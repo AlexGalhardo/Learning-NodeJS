@@ -242,7 +242,6 @@ import { sum } from './Math';
 console.log(`SOMA: ${sum(n1,n2)}`);
 ```
 
-
 ## JSON SERVER FAST REST API
 - $ sudo npm install -g json-server
 - create db.json
@@ -304,41 +303,43 @@ console.log(`SOMA: ${sum(n1,n2)}`);
   ]
 }
 ```
-
 - $ json-server --watch db.json
 <table>
+
 <thead>
 <tr>
 <th>Request</th>
 <th>URL</th>
 <th>Details</th>
+<td>headers: { 'Content-Type': 'application/json' }</td>
 </tr>
 </thead>
+
 <tbody>
+
 <tr>
 <td>GET</td>
 <td>http://localhost:3000/products</td>
 <td>Return all products</td>
 </tr>
+
 <tr>
 <td>GET</td>
-<td>/products/1</td>
-<td>Return product by ID</td>
 <td>http://localhost:3000/products/1</td>
+<td>Return product by ID</td>
 </tr>
 <tr>
+
 <td>POST</td>
 <td>http://localhost:3000/products</td>
 <td>Create new product</td>
 <td>
-   ```json
    {
        "nome": "Bolo de Cenoura com cobertura de chocolate",
        "descricao": "DELÍCIA",
        "preco": 9.5,
        "categoria_id": 1
    }
-   ```
 </td>
 </tr>
 <tr>
@@ -346,14 +347,12 @@ console.log(`SOMA: ${sum(n1,n2)}`);
 <td>http://localhost:3000/products/1</td>
 <td>Update all product data by ID</td>
 <td>
-   ```json
    {
        "name": "Sushi edited",
        "description": "description edited",
        "preco": 10.5,
        "category_id": 1
    }
-   ```
 </td>
 </tr>
 <tr>
@@ -361,11 +360,9 @@ console.log(`SOMA: ${sum(n1,n2)}`);
 <td>http://localhost:3000/products/1</td>>
 <td>Update some product data by ID</td>
 <td>
-   ```json
    {
-       "name": "New Sushi Name",
+       "name": "New Sushi Name"
    }
-   ```
 </td>
 </tr>
 <tr>
