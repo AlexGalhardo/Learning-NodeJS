@@ -58,6 +58,7 @@ server.listen(8080, () => { console.log('listening on 3001') });
 ## Modules/Packages
 - HTTP
    - [https://expressjs.com/pt-br/](https://expressjs.com/pt-br/)
+   - [https://www.npmjs.com/package/node-fetch](https://www.npmjs.com/package/node-fetch)
 - CORS
    - [https://www.npmjs.com/package/cors](https://www.npmjs.com/package/cors)
 - ORM
@@ -89,6 +90,10 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [https://helmetjs.github.io/](https://helmetjs.github.io/)
 - JSON-SERVER
    - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
+- FAKE DATA
+   - [https://github.com/Marak/faker.js](https://github.com/Marak/faker.js)
+- Process Manager
+   - [https://github.com/typicode/hotel](https://github.com/typicode/hotel)
 
 ## FREE APIs to Play
 - https://jsonplaceholder.typicode.com/
@@ -239,63 +244,62 @@ console.log(`SOMA: ${sum(n1,n2)}`);
 
 
 ## JSON SERVER FAST REST API
-- reference: https://www.fabricadecodigo.com/json-server/
 - $ sudo npm install -g json-server
 - create db.json
 ```json
 {
-  "produtos": [
+  "products": [
     {
       "id": 1,
-      "nome": "Hambúrguer",
-      "descricao": "Pão, bife de hambúrguer 90g, salada e batata.",
+      "name": "Sushi",
+      "description": "A melhor comida que existe.",
       "preco": 8.5,
-      "categoria_id": 1
+      "category_id": 1
     },
     {
       "id": 2,
-      "nome": "X-Búrguer",
-      "descricao": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, salada e batata.",
+      "name": "Batata Frita",
+      "description": "Só o Cristiano Ronaldo não gosta.",
       "preco": 10.5,
-      "categoria_id": 1
+      "category_id": 1
     },
     {
       "id": 3,
-      "nome": "X-Bacon",
-      "descricao": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
+      "name": "X-Tudo",
+      "description": "Melhor lanche que existe.",
       "preco": 12.5,
-      "categoria_id": 1
+      "category_id": 1
     },
     {
       "id": 4,
-      "nome": "X-Tudo",
-      "descricao": "Pão, 2 bifes de hambúrguer 90g, 2 fatias de queijo, 4 fatias de bacon, salada e batata.",
+      "name": "Tubaina",
+      "description": "Os clássicos a gente nunca esquece.",
       "preco": 14.5,
-      "categoria_id": 1
+      "category_id": 2
     },
     {
       "id": 5,
-      "nome": "Coca cola 350ml",
-      "descricao": "",
+      "name": "Koka Kola",
+      "description": "Refrigerante que faz mal.",
       "preco": 5.5,
-      "categoria_id": 2
+      "category_id": 2
     },
     {
       "id": 6,
-      "nome": "Coca cola 600ml",
-      "descricao": "",
+      "name": "Dollynho",
+      "description": "Seu amiguinho, vamos brincar?",
       "preco": 7.5,
-      "categoria_id": 2
+      "category_id": 2
     }
   ],
-  "categorias": [
+  "categories": [
     {
       "id": 1,
-      "nome": "Hambúrgueres"
+      "name": "Comida"
     },
     {
       "id": 2,
-      "nome": "Refrigerantes"
+      "name": "Refrigerantes"
     }
   ]
 }
@@ -306,82 +310,82 @@ console.log(`SOMA: ${sum(n1,n2)}`);
 <tr>
 <th>Request</th>
 <th>URL</th>
-<th>Detalhes</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>GET</td>
-<td>/produtos</td>
-<td>Busca todos os produtos</td>
+<td>http://localhost:3000/products</td>
+<td>Return all products</td>
 </tr>
 <tr>
 <td>GET</td>
-<td>/produtos/1</td>
-<td>Busca um produto</td>
+<td>/products/1</td>
+<td>Return product by ID</td>
+<td>http://localhost:3000/products/1</td>
 </tr>
 <tr>
 <td>POST</td>
-<td>/produtos</td>
-<td>Salva um produto</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>/produtos/1</td>
-<td>Atualiza dos os dados do produto</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td>/produtos/1</td>
-<td>Atualiza parte dos dados do produto</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/produtos/1</td>
-<td>Remove um produto</td>
-</tr>
-</tbody>
-</table>
-
-- GET ALL PRODUTOS
-   - GET http://localhost:3000/produtos/
-- GET PRODUCT BY ID
-   - GET http://localhost:3000/produtos/1
-- CREATE PRODUCT
-   - POST http://localhost:3000/produtos/
+<td>http://localhost:3000/products</td>
+<td>Create new product</td>
+<td>
    ```json
-   // Content-Type: application/json
    {
-       "nome": "Hambúrguer de frango",
-       "descricao": "Pão, bife de hambúrguer 90g de frango, salada e batata.",
+       "nome": "Bolo de Cenoura com cobertura de chocolate",
+       "descricao": "DELÍCIA",
        "preco": 9.5,
        "categoria_id": 1
    }
    ```
-- UPDATE PRODUCT BY ID
-   - PUT http://localhost:3000/produtos/1
+</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>http://localhost:3000/products/1</td>
+<td>Update all product data by ID</td>
+<td>
    ```json
-   // Content-Type: application/json
    {
-       "nome": "Hambúrguer de frango",
-       "descricao": "Pão, bife de hambúrguer 90g de frango, salada e batata.",
+       "name": "Sushi edited",
+       "description": "description edited",
        "preco": 10.5,
-       "categoria_id": 1
+       "category_id": 1
    }
    ```
-- UPDATE SPECIFIC ITEM IN PRODUCT BY ID
-   - PATCH http://localhost:3000/produtos/1
+</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>http://localhost:3000/products/1</td>>
+<td>Update some product data by ID</td>
+<td>
    ```json
-   // Content-Type: application/json
    {
-       "nome": "Hambúrguer de frango artezanal"
+       "name": "New Sushi Name",
    }
    ```
-- DELETE PRODUCT BY ID
-   - DELETE http://localhost:3000/produtos/1
-- FILTER PRODUCTS BY URL
-   - GET http://localhost:3000/produtos?nome=X-Búrguer
-- PAGINATION
-   - GET http://localhost:3000/produtos/?_page=1&_limit=2
-- ORDER BY LIMIT/OFFSET
-   - GET http://localhost:3000/produtos/?_sort=nome&_order=desc
+</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>http://localhost:3000/produtos/1</td>
+<td>Delete a product by ID</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>http://localhost:3000/products?name=Sushi</td>
+<td>Filter products by name</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>http://localhost:3000/products/?_page=1&_limit=2</td>
+<td>Get products by Pagination</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>http://localhost:3000/produtos/?_sort=nome&_order=desc</td>
+<td>Get products by order by</td>
+</tr>
+</tbody>
+</table>
