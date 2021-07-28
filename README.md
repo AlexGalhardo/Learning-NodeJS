@@ -304,6 +304,7 @@ console.log(`SOMA: ${sum(n1,n2)}`);
   ]
 }
 ```
+
 - $ json-server --watch db.json
 <table>
 <thead>
