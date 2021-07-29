@@ -74,7 +74,7 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [https://adonisjs.com/](https://adonisjs.com/)
 - Authentication
    - [http://www.passportjs.org/](http://www.passportjs.org/)
-- Dates
+- Dates & Times
    - [https://www.npmjs.com/package/moment](https://www.npmjs.com/package/moment)
 - Logger Middleware
    - [https://www.npmjs.com/package/morgan](https://www.npmjs.com/package/morgan)
@@ -112,6 +112,34 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - "rootDir": "./src", 
    - "module": "commonjs",
    - "moduleResolution": "node"
+
+## Using Bcrypt Example
+- $ npm install bcrypt
+- ../helpers/Bcrypt.js
+```js
+const bcrypt = require('bcrypt');
+
+const Bcrypt = {
+    cryptPassword: (password) =>
+        bcrypt.genSalt(12)
+        .then((salt => bcrypt.hash(password, salt)))
+        .then(hash => hash),
+
+    comparePassword: (password, hashPassword) =>
+        bcrypt.compare(password, hashPassword)
+        .then(resp => resp)
+};
+
+module.exports = Bcrypt;
+```
+- using Bcrypt
+```js
+const Bcrypt = require('../helpers/Bcrypt')
+const password = 'userpassword';
+const passwordHash = '$2y$12$skd4.pWo.BU6/QpMIWhAK..XSVfpWWx7srqIrdmO0nHmknwOCureS';
+const userPasswordHash = await Bcrypt.cryptPassword(password); // return hash
+const userPasswordIsValid = await Bcrypt.comparePassword(password, passwordHash); // return true or false
+```
 
 ## Services
 - SMS/Voice 
@@ -432,9 +460,9 @@ const body = {
     "category_id": 2
 };
 
-const product_id = 8;
+const product_id_to_put = 8;
 
-fetch(`${API_URL}/${ENDPOINT}/${product_id}`, {
+fetch(`${API_URL}/${ENDPOINT}/${product_id_to_put}`, {
   method: 'PUT',
   body:    JSON.stringify(body),
   headers: { 'Content-Type': 'application/json' },
@@ -452,7 +480,7 @@ const body = {
 
 const product_id_to_patch = 12;
 
-fetch(`${API_URL}/${endpoint}/${product_id_to_patch}`, {
+fetch(`${API_URL}/${ENDPOINT}/${product_id_to_patch}`, {
     method: 'PATCH',
     body:    JSON.stringify(body),
     headers: { 'Content-Type': 'application/json' },
