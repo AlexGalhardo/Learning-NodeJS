@@ -1,0 +1,24 @@
+{
+  "name": "api-pix-gn",
+  "version": "1.0.0",
+  "description": "API Pix GerenciaNet",
+  "main": "index.js",
+  "engines": {
+    "node": "14.17.3"
+  },
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "Alex Galhardo",
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^8.6.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
