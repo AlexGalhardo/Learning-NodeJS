@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-login-registration",
+  "version": "1.0.0",
+  "description": "Node JS Login And Registration System",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.11.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.12"
+  }
+}

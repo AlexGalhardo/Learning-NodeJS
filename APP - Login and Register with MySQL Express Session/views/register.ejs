@@ -1,0 +1,23 @@
+<%- include('header',{
+    title:'Signup'
+}); -%>
+
+<div class="container">
+    <h1>Sign Up</h1>
+    <form action="" method="POST">
+        <label for="user_name">Name</label>
+        <input type="text" class="input" name="_name" autocomplete="off" id="user_name" placeholder="Enter your name">
+        <label for="user_email">Email</label>
+        <input type="email" class="input" name="_email" autocomplete="off" id="user_email" placeholder="Enter your email">
+        <label for="user_pass">Password</label>
+        <input type="password" class="input" name="_password" id="user_pass" placeholder="Enter new password">
+        <% if(typeof msg != 'undefined'){ %>
+        <div class="success-msg"><%= msg %></div><% }
+        if(typeof error !== 'undefined'){ %>
+        <div class="err-msg"><%= error %></div><% } %>
+        <input type="submit" value="Sign Up">
+        <div class="link"><a href="./login">Login</a></div>
+    </form>
+</div>
+
+<%- include('footer'); -%>
