@@ -5,6 +5,9 @@
 
 ## Others
 - https://nodejs.dev/learn
+- https://heynode.com/
+   - https://heynode.com/tutorial/overview-environmental-variables/
+   - https://opensource.com/article/19/8/what-are-environment-variables
 - https://erickwendel.teachable.com/
 - https://www.udemy.com/course/the-complete-nodejs-developer-course-2/
 - https://www.udemy.com/course/nodejs-the-complete-guide/
@@ -14,6 +17,7 @@
 - https://github.com/sindresorhus/awesome-nodejs
 - https://www.npmjs.com/package/insomnia-documenter
 - https://swagger.io/
+- https://randomkeygen.com/
 
 ## Commands
 - $ npm init
@@ -57,12 +61,16 @@ server.listen(8080, () => { console.log('listening on 3001') });
 
 ## Modules/Packages
 - HTTP
-   - [https://expressjs.com/pt-br/](https://expressjs.com/pt-br/)
    - [https://www.npmjs.com/package/node-fetch](https://www.npmjs.com/package/node-fetch)
+- Express
+   - [https://expressjs.com/pt-br/](https://expressjs.com/pt-br/)
+   - [https://express-validator.github.io/docs/](https://express-validator.github.io/docs/)
+   - [https://www.npmjs.com/package/express-jwt](https://www.npmjs.com/package/express-jwt)
+   - [https://www.npmjs.com/package/express-mysql-session](https://www.npmjs.com/package/express-mysql-session)
+   - [https://www.npmjs.com/package/express-session](https://www.npmjs.com/package/express-session)
+      - https://github.com/expressjs/session/blob/master/README.md
 - CORS
    - [https://www.npmjs.com/package/cors](https://www.npmjs.com/package/cors)
-- ORM
-   - [https://sequelize.org/](https://sequelize.org/)
 - Validator
    - [https://www.npmjs.com/package/validator](https://www.npmjs.com/package/validator)
 - Template Engine
@@ -74,6 +82,9 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [https://adonisjs.com/](https://adonisjs.com/)
 - Authentication
    - [http://www.passportjs.org/](http://www.passportjs.org/)
+   - [https://www.npmjs.com/package/passport-local-mongoose](https://www.npmjs.com/package/passport-local-mongoose)
+   - [https://www.npmjs.com/package/passport-local](https://www.npmjs.com/package/passport-local)
+   - [https://www.npmjs.com/package/connect-ensure-login](https://www.npmjs.com/package/connect-ensure-login)
 - Dates & Times
    - [https://www.npmjs.com/package/moment](https://www.npmjs.com/package/moment)
 - Logger Middleware
@@ -88,6 +99,8 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [https://www.npmjs.com/package/compression](https://www.npmjs.com/package/compression)
 - Security HTTP Headers
    - [https://helmetjs.github.io/](https://helmetjs.github.io/)
+- UUID
+   - [https://www.npmjs.com/package/uuid](https://www.npmjs.com/package/uuid)
 - JSON-SERVER
    - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
 - FAKE DATA
@@ -146,10 +159,10 @@ const userPasswordIsValid = await Bcrypt.comparePassword(password, passwordHash)
    - [https://www.zenvia.com/](https://www.zenvia.com/)
    - [https://www.twilio.com/](https://www.twilio.com/)
 - SMTP
+   - [https://ethereal.email/](https://ethereal.email/)
    - [https://www.mailgun.com/](https://www.mailgun.com/)
    - [https://www.sendinblue.com/](https://www.sendinblue.com/)
    - [https://sendgrid.com/](https://sendgrid.com/)
-   - [https://www.activecampaign.com/](https://www.activecampaign.com/)
 
 ## MongoDB
 - DEFAULT PORT: 27017
@@ -166,6 +179,8 @@ const userPasswordIsValid = await Bcrypt.comparePassword(password, passwordHash)
 
 ## MySQL
 - DEFAULT PORT: 3306
+- ORM
+   - [https://sequelize.org/](https://sequelize.org/)
 - Packages
    - https://www.npmjs.com/package/mysql2
 - As A Service
