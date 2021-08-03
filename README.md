@@ -105,6 +105,8 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
 - FAKE DATA
    - [https://github.com/Marak/faker.js](https://github.com/Marak/faker.js)
+- PROCESS MANAGER
+   - [https://www.npmjs.com/package/pm2](https://www.npmjs.com/package/pm2)
 - Process Manager
    - [https://github.com/typicode/hotel](https://github.com/typicode/hotel)
 
@@ -179,6 +181,8 @@ const userPasswordIsValid = await Bcrypt.comparePassword(password, passwordHash)
 
 ## MySQL
 - DEFAULT PORT: 3306
+- Tutorial
+   - [https://www.mysqltutorial.org/](https://www.mysqltutorial.org/)
 - ORM
    - [https://sequelize.org/](https://sequelize.org/)
 - Packages
