@@ -56,8 +56,9 @@ const express = require('express')
 const https = require('https');
 const app = express()
 const server = https.createServer({key: key, cert: cert }, app);
-server.listen(8080, () => { console.log('listening on 3001') });
+server.listen(8080, () => { console.log('listening on 8080') });
 ```
+- OR use module: https://www.npmjs.com/package/https-localhost
 
 ## Modules/Packages
 - HTTP
