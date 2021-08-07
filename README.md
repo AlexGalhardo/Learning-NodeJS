@@ -101,6 +101,8 @@ server.listen(8080, () => { console.log('listening on 3001') });
    - [https://helmetjs.github.io/](https://helmetjs.github.io/)
 - UUID
    - [https://www.npmjs.com/package/uuid](https://www.npmjs.com/package/uuid)
+- Query String
+   - [https://www.npmjs.com/package/query-string](https://www.npmjs.com/package/query-string)
 - JSON-SERVER
    - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
 - FAKE DATA
@@ -151,9 +153,29 @@ module.exports = Bcrypt;
 ```js
 const Bcrypt = require('../helpers/Bcrypt')
 const password = 'userpassword';
-const passwordHash = '$2y$12$skd4.pWo.BU6/QpMIWhAK..XSVfpWWx7srqIrdmO0nHmknwOCureS';
-const userPasswordHash = await Bcrypt.cryptPassword(password); // return hash
-const userPasswordIsValid = await Bcrypt.comparePassword(password, passwordHash); // return true or false
+
+// return hash
+const userPasswordHash = await Bcrypt.cryptPassword(password);
+userPasswordHash = '$2y$12$skd4.pWo.BU6/QpMIWhAK..XSVfpWWx7srqIrdmO0nHmknwOCureS'
+// return true or false
+const userPasswordIsValid = await Bcrypt.comparePassword(password, userPasswordHash)
+
+
+```
+
+## Force HTTP to HTTPS in Production
+```js
+const app = express();
+
+if(process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https') {
+      res.redirect(`https://${req.header('host')}${req.url}`)
+    } else {
+      next();
+    }
+  });
+}
 ```
 
 ## Services
@@ -222,6 +244,11 @@ sudo docker exec -it mongodb \
 ```
 
 ## Deploy
+- https://dnsimple.com/
+- https://certbot.eff.org/
+- https://howdns.works/
+- https://howhttps.works
+- https://howdnssec.works/
 - Heroku
    - https://devcenter.heroku.com/articles/heroku-cli
    - https://devcenter.heroku.com/articles/deploying-nodejs
@@ -456,15 +483,14 @@ fetch(`${API_URL}/${ENDPOINT}`, {
 
 
 // --------- POST
-const body = {
-    "name": "New item adicionado com NODEJS",
-    "description": "npm init e tals",
-    "price": 19.90,
-    "category_id": 1
-};
 fetch(`${API_URL}/${ENDPOINT}`, {
      method: 'POST',
-     body:    JSON.stringify(body),
+     body: JSON.stringify({
+        "name": "New item adicionado com NODEJS",
+        "description": "npm init e tals",
+        "price": 19.90,
+        "category_id": 1
+     }),
      headers: { 'Content-Type': 'application/json' },
  })
  .then(res => res.json())
@@ -472,18 +498,16 @@ fetch(`${API_URL}/${ENDPOINT}`, {
 
 
 // --------- PUT
-const body = {
-    "name": "PRODUTO 8 ATUALIZADO",
-    "description": "description atualized",
-    "price": 59.90,
-    "category_id": 2
-};
-
 const product_id_to_put = 8;
 
 fetch(`${API_URL}/${ENDPOINT}/${product_id_to_put}`, {
   method: 'PUT',
-  body:    JSON.stringify(body),
+  body: JSON.stringify({
+        "name": "PRODUTO 8 ATUALIZADO",
+        "description": "description atualized",
+        "price": 59.90,
+        "category_id": 2
+  }),
   headers: { 'Content-Type': 'application/json' },
 })
   .then(response => response.json())
@@ -492,16 +516,14 @@ fetch(`${API_URL}/${ENDPOINT}/${product_id_to_put}`, {
 
 
 // --------- PATCH
-const body = {
-    "name": "Item 12 nome atualizado",
-    "price": 39.90,
-};
-
 const product_id_to_patch = 12;
 
 fetch(`${API_URL}/${ENDPOINT}/${product_id_to_patch}`, {
     method: 'PATCH',
-    body:    JSON.stringify(body),
+    body:    JSON.stringify({
+        "name": "Item 12 nome atualizado",
+        "price": 39.90,
+    }),
     headers: { 'Content-Type': 'application/json' },
 })
   .then(response => response.json())
