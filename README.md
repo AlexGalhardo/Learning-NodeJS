@@ -79,6 +79,10 @@ server.listen(8080, () => { console.log('listening on 8080') });
       - https://github.com/expressjs/session/blob/master/README.md
 - CORS
    - [https://www.npmjs.com/package/cors](https://www.npmjs.com/package/cors)
+- Testing and Code Quality
+   - [https://www.npmjs.com/package/jest](https://www.npmjs.com/package/jest)
+   - [https://www.npmjs.com/package/prettier](https://www.npmjs.com/package/prettier)
+   - [https://www.npmjs.com/package/eslint](https://www.npmjs.com/package/eslint)
 - .gitginore
    - [https://www.npmjs.com/package/gitignore](https://www.npmjs.com/package/gitignore)
 - Validator
