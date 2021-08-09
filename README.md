@@ -38,12 +38,14 @@
    - $ sudo npm install -g express-generator
    - $ sudo npm install -g lite-server
 - Dependencies
-   - $ npm install --save mustache-express
+   - $ npm install mustache-express
 - DevDependencies
    - $ npm install --save-dev @types/node
    - $ npm install --save-dev @types/mustache-express
    - $ npm install --save-dev @types/validator
    - $ npm install --save-dev @types/express
+   - $ npm i -D @types/body-parser
+      - -D = --save-dev
 
 ## Latest Stable Version
 - $ sudo npm cache clean -f
@@ -77,8 +79,11 @@ server.listen(8080, () => { console.log('listening on 8080') });
       - https://github.com/expressjs/session/blob/master/README.md
 - CORS
    - [https://www.npmjs.com/package/cors](https://www.npmjs.com/package/cors)
+- .gitginore
+   - [https://www.npmjs.com/package/gitignore](https://www.npmjs.com/package/gitignore)
 - Validator
    - [https://www.npmjs.com/package/validator](https://www.npmjs.com/package/validator)
+   - [https://www.npmjs.com/package/joi](https://www.npmjs.com/package/joi)
 - Template Engine
    - [https://github.com/janl/mustache.js](https://github.com/janl/mustache.js)
    - [https://www.npmjs.com/package/mustache-express](https://www.npmjs.com/package/mustache-express)
@@ -128,15 +133,37 @@ server.listen(8080, () => { console.log('listening on 8080') });
 
 
 ## TypeScrypt
-- $ sudo npm install -g typescript
+- $ sudo npm install -g nodemon typescript ts-node
+- $ npm install --save-dev @types/express @types/mustache-express @types/node copyfiles
 - $ tsc --init
-- $ npm install --save-dev @types/node
 - $ tsc -w (ficar monitorando typescript)
+- package.json
+   - "scripts":
+      - "start": "tsc ; nodemon ./dist/app",
 - tsconfig.json 
    - "outDir": "./dist",                              
    - "rootDir": "./src", 
    - "module": "commonjs",
    - "moduleResolution": "node"
+- nodemon.json
+```json
+{
+ "restartable": "rs",
+ "ignore": [
+   ".git",
+   "dist",
+   "node_modules/**/node_modules"
+ ],
+ "verbose": true,
+ "events": {
+   "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+ },
+ "env": {
+   "NODE_ENV": "development"
+ },
+ "ext": "ts,json"
+}
+```
 
 ## Using Bcrypt Example
 - $ npm install bcrypt
@@ -256,17 +283,18 @@ sudo docker exec -it mongodb \
    - https://docs.github.com/pt/actions/guides/building-and-testing-nodejs
 - DNS
    - https://dnsimple.com/
-   - https://certbot.eff.org/ 
    - https://howdns.works/
    - https://howhttps.works
    - https://howdnssec.works/
+- SSL/HTTPS VPS
+   - https://certbot.eff.org/ 
 - Heroku
    - https://devcenter.heroku.com/articles/heroku-cli
    - https://devcenter.heroku.com/articles/deploying-nodejs
 - AWS
    - SDK
       - https://aws.amazon.com/sdk-for-javascript/
-   - Tutoriais
+   - Tutorials
       - https://aws.amazon.com/getting-started/hands-on/deploy-nodejs-web-app/
       - https://www.luiztools.com.br/post/publicando-sua-aplicacao-node-js-no-amazon-lightsail-aws/
       - https://www.luiztools.com.br/post/deploy-de-banco-mongodb-na-aws-com-atlas/
