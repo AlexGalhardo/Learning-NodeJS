@@ -3,6 +3,10 @@
 ## Install Ubuntu 
 - [https://snapcraft.io/node](https://snapcraft.io/node)
 
+## Event Loop
+- https://www.origamid.com/slide/javascript-completo-es6/#/0101-javascript-completo-es6/11
+![event_loop](https://user-images.githubusercontent.com/19540357/128660447-0b1ef65c-b7b1-4277-b510-5a66b5fc8138.jpg)
+
 ## Others
 - https://nodejs.dev/learn
 - https://heynode.com/
@@ -106,12 +110,14 @@ server.listen(8080, () => { console.log('listening on 8080') });
    - [https://www.npmjs.com/package/query-string](https://www.npmjs.com/package/query-string)
 - JSON-SERVER
    - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
+- Logging
+   - [https://www.npmjs.com/package/bunyan](https://www.npmjs.com/package/bunyan)
+   - [https://www.npmjs.com/package/winston](https://www.npmjs.com/package/winston)
 - FAKE DATA
    - [https://github.com/Marak/faker.js](https://github.com/Marak/faker.js)
-- PROCESS MANAGER
+- Production
    - [https://www.npmjs.com/package/pm2](https://www.npmjs.com/package/pm2)
-- Process Manager
-   - [https://github.com/typicode/hotel](https://github.com/typicode/hotel)
+   - [https://www.npmjs.com/package/@sentry/node](https://www.npmjs.com/package/@sentry/node)
 
 ## FREE APIs to Play
 - https://jsonplaceholder.typicode.com/
@@ -301,7 +307,7 @@ export default {
 - index.ts
 ```ts
 import * as Math from './Math';
-console.log(`SOMA: ${Math.sum(n1,n2)}`);
+console.log(`SUM: ${Math.sum(2,3)}`); // SUM: 5
 ```
 
 #### Modern Functions
@@ -314,7 +320,7 @@ export function sum(x:number, y:number):number {
 - index.ts
 ```ts
 import { sum } from './Math';
-console.log(`SOMA: ${sum(n1,n2)}`);
+console.log(`SUM: ${sum(2,3)}`); // SUM: 5
 ```
 
 ## JSON SERVER FAST REST API
