@@ -9,6 +9,7 @@
 
 ## Others
 - https://nodejs.dev/learn
+- [YouTube Grátis - Curso de Node.js do zero a produção!! Construindo uma API com Typescript, Jest, TDD e muito mais - Waldemar Neto](https://www.youtube.com/watch?v=W2ld5xRS3cY&list=PLz_YTBuxtxt6_Zf1h-qzNsvVt46H8ziKh&index=2&ab_channel=WaldemarNeto-DevLab)
 - https://heynode.com/
    - https://heynode.com/tutorial/overview-environmental-variables/
    - https://opensource.com/article/19/8/what-are-environment-variables
@@ -251,11 +252,14 @@ sudo docker exec -it mongodb \
 ```
 
 ## Deploy
-- https://dnsimple.com/
-- https://certbot.eff.org/
-- https://howdns.works/
-- https://howhttps.works
-- https://howdnssec.works/
+- GitHub Workflows/Actions
+   - https://docs.github.com/pt/actions/guides/building-and-testing-nodejs
+- DNS
+   - https://dnsimple.com/
+   - https://certbot.eff.org/ 
+   - https://howdns.works/
+   - https://howhttps.works
+   - https://howdnssec.works/
 - Heroku
    - https://devcenter.heroku.com/articles/heroku-cli
    - https://devcenter.heroku.com/articles/deploying-nodejs
@@ -271,12 +275,8 @@ sudo docker exec -it mongodb \
       - https://aws.amazon.com/s3/
       - https://www.npmjs.com/package/multer-s3
       - https://www.npmjs.com/package/s3-proxy
-
 - DigitalOcean
    - https://www.luiztools.com.br/post/deploy-de-aplicacao-node-js-na-digital-ocean/
-- Articles
-   - https://blog.risingstack.com/node-js-logging-tutorial/
-   - https://expressjs.com/pt-br/advanced/best-practice-security.html
 
 ## Import/Export Modules
 

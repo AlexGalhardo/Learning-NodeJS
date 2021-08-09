@@ -4,6 +4,10 @@
 - https://tipscode.com.br/como-construir-uma-api-restful-conheca-as-13-melhores-boas-praticas
 - https://tipscode.com.br/event-loop-em-node-guia-completo
 
+
+- https://blog.risingstack.com/node-js-logging-tutorial/
+- https://expressjs.com/pt-br/advanced/best-practice-security.html
+
 ## PM2
 - https://imasters.com.br/back-end/executando-o-pm2-e-o-node-js-em-ambientes-de-producao
 - https://blog.rocketseat.com.br/pm2-com-funcionalidades-secretas/
