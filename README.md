@@ -102,8 +102,6 @@ server.listen(8080, () => { console.log('listening on 8080') });
    - [https://www.npmjs.com/package/connect-ensure-login](https://www.npmjs.com/package/connect-ensure-login)
 - Dates & Times
    - [https://www.npmjs.com/package/moment](https://www.npmjs.com/package/moment)
-- Logger Middleware
-   - [https://www.npmjs.com/package/morgan](https://www.npmjs.com/package/morgan)
 - EMAIL SMTP
    - [https://www.npmjs.com/package/nodemailer](https://www.npmjs.com/package/nodemailer)
 - Slug
@@ -123,6 +121,7 @@ server.listen(8080, () => { console.log('listening on 8080') });
 - Logging
    - [https://www.npmjs.com/package/bunyan](https://www.npmjs.com/package/bunyan)
    - [https://www.npmjs.com/package/winston](https://www.npmjs.com/package/winston)
+   - [https://www.npmjs.com/package/morgan](https://www.npmjs.com/package/morgan)
 - FAKE DATA
    - [https://github.com/Marak/faker.js](https://github.com/Marak/faker.js)
 - Production
