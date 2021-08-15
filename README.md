@@ -76,7 +76,8 @@ server.listen(8080, () => { console.log('listening on 8080') });
    - [https://www.npmjs.com/package/express-jwt](https://www.npmjs.com/package/express-jwt)
    - [https://www.npmjs.com/package/express-mysql-session](https://www.npmjs.com/package/express-mysql-session)
    - [https://www.npmjs.com/package/express-session](https://www.npmjs.com/package/express-session)
-      - https://github.com/expressjs/session/blob/master/README.md
+   - Articles
+      - https://expressjs.com/en/advanced/best-practice-performance.html
 - CORS
    - [https://www.npmjs.com/package/cors](https://www.npmjs.com/package/cors)
 - Testing and Code Quality
@@ -91,6 +92,8 @@ server.listen(8080, () => { console.log('listening on 8080') });
 - Template Engine
    - [https://github.com/janl/mustache.js](https://github.com/janl/mustache.js)
    - [https://www.npmjs.com/package/mustache-express](https://www.npmjs.com/package/mustache-express)
+- Cache
+   - [https://www.npmjs.com/package/node-cache](https://www.npmjs.com/package/node-cache)
 - Parser URL Encoded
    - [https://www.npmjs.com/package/body-parser](https://www.npmjs.com/package/body-parser)
 - Framework MVC

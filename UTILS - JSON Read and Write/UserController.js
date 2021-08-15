@@ -279,8 +279,8 @@ class Users {
 async function main(){
   // console.log(Users.getUsers());
 
-  // const user = Users.getUserByID("13667f62-03d6-4b46-bd22-0bbf2a3b89d2");
-  // console.log('getUserByID é: ', user)
+  const user = Users.getUserByID("13667f62-03d6-4b46-bd22-0bbf2a3b89d2");
+  console.log('getUserByID é: ', user)
 
   // const user = await Users.getUserByEmail("kaka@gmail.com");
   // console.log('getUserByEmail é: ', user)
