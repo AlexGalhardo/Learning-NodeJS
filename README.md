@@ -78,14 +78,28 @@ server.listen(8080, () => { console.log('listening on 8080') });
    - [https://www.npmjs.com/package/express-session](https://www.npmjs.com/package/express-session)
    - Articles
       - https://expressjs.com/en/advanced/best-practice-performance.html
+- Debug
+   - [https://www.npmjs.com/package/debug](https://www.npmjs.com/package/debug)
+- File System
+   - [https://www.npmjs.com/package/fs-extra](https://www.npmjs.com/package/fs-extra)
+- Async
+   - [https://www.npmjs.com/package/async](https://www.npmjs.com/package/async)
 - CORS
    - [https://www.npmjs.com/package/cors](https://www.npmjs.com/package/cors)
+- Utilites
+   - [https://www.npmjs.com/package/lodash](https://www.npmjs.com/package/lodash)
 - Testing and Code Quality
    - [https://www.npmjs.com/package/jest](https://www.npmjs.com/package/jest)
    - [https://www.npmjs.com/package/prettier](https://www.npmjs.com/package/prettier)
    - [https://www.npmjs.com/package/eslint](https://www.npmjs.com/package/eslint)
+   - [https://mochajs.org/](https://mochajs.org/)
+   - [https://www.chaijs.com/](https://www.chaijs.com/)
+   - [https://visionmedia.github.io/superagent/](https://visionmedia.github.io/superagent/)
 - .gitginore
    - [https://www.npmjs.com/package/gitignore](https://www.npmjs.com/package/gitignore)
+- CLI
+   - [https://www.npmjs.com/package/commander](https://www.npmjs.com/package/commander)
+   - [https://www.npmjs.com/package/chalk](https://www.npmjs.com/package/chalk)
 - Validator
    - [https://www.npmjs.com/package/validator](https://www.npmjs.com/package/validator)
    - [https://www.npmjs.com/package/joi](https://www.npmjs.com/package/joi)
