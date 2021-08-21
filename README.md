@@ -5,18 +5,20 @@
 
 ## Event Loop
 - https://www.origamid.com/slide/javascript-completo-es6/#/0101-javascript-completo-es6/11
+- [Talk #27 - JavaScript Event Loop (Parte 1)](https://www.youtube.com/watch?v=va8-xdxTywU)
+- [Mas que diabos é o loop de eventos? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=0s)
 ![event_loop](https://user-images.githubusercontent.com/19540357/128660447-0b1ef65c-b7b1-4277-b510-5a66b5fc8138.jpg)
 
 ## Others
 - https://nodejs.dev/learn
 - [YouTube Grátis - Curso de Node.js do zero a produção!! Construindo uma API com Typescript, Jest, TDD e muito mais - Waldemar Neto](https://www.youtube.com/watch?v=W2ld5xRS3cY&list=PLz_YTBuxtxt6_Zf1h-qzNsvVt46H8ziKh&index=2&ab_channel=WaldemarNeto-DevLab)
 - https://heynode.com/
-   - https://heynode.com/tutorial/overview-environmental-variables/
-   - https://opensource.com/article/19/8/what-are-environment-variables
+- https://opensource.com/article/19/8/what-are-environment-variables
 - https://erickwendel.teachable.com/
 - https://www.udemy.com/course/the-complete-nodejs-developer-course-2/
 - https://www.udemy.com/course/nodejs-the-complete-guide/
 - https://www.luiztools.com.br/
+- [Google Chrome Developers YouTube](https://www.youtube.com/c/GoogleChromeDevelopers)
 
 ## Resources
 - https://github.com/sindresorhus/awesome-nodejs
