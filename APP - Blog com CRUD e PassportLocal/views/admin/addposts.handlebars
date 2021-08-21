@@ -1,0 +1,46 @@
+{{#each errors}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+<div class="card">
+    <div class="card-body">
+        <h4>Nova postagem</h4>
+        <form action="/admin/posts/new" method="POST">
+
+            <label for="title">Título:</label>
+            <input type="text" name="title" class="form-control" required>
+
+            <label for="slug">Slug:</label>
+            <input type="text" name="slug" class="form-control" required>
+
+            <label for="description">Descrição:</label>
+            <input type="text" name="description" class="form-control" required>
+
+            <label for="content">Conteúdo:</label>
+
+            <!-- class custom-select não funcionou e usei form-control que estava na documentação do bootstrap -->
+            <textarea name="content" class="form-control"  required></textarea>
+
+            <label for="category">Categoria:</label>
+            <select name="category" class="form-select">
+
+                {{#each categories}}
+
+                    <option value="{{_id}}">{{name}}</option>
+
+                {{else}}
+
+                    <option value="0">Nenhuma categoria registrada!</option>
+
+                {{/each}}
+            </select>
+
+            <br>
+
+            <button type="submit" class="btn btn-success">Criar Postagem</button>
+
+        </form>
+    </div>
+</div>

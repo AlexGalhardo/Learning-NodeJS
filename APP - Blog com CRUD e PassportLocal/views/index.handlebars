@@ -1,0 +1,28 @@
+<!-- POR MINHA CONTA: componente jumbotron não existe mais na v5 do bootstrap e fiz algumas estilizações por minha conta no arquivo style.css na pasta public/css -->
+
+<div class="jumbotron">
+  <h1 class="display-4">Bem-vindo ao blog do NodeJS</h1>
+  <p class="lead">Este é um BLOG simples, desenvolvido com Node.js + Express + MongoDB</p>
+  <hr class="my-4">
+  <p>Aqui você vai poder ler sobre as novidades do mundo da computação.</p>
+  <a class="btn btn-primary btn-lg" href="/user/signup" role="button">Crie uma conta</a>
+</div>
+
+<hr>
+
+<h2 id="posts">Postagens recentes:</h2>
+
+{{#each posts}}
+<div class="card" class="mt-4">
+    <div class="card-body">
+        <h3>{{title}}</h3>
+        <p>{{description}}</p>
+        <a href="/posts/{{slug}}" class="btn btn-success">Leia Mais...</a>
+        <hr>
+        <small>Categoria: {{category.name}}</small><br>
+        <small>Data de publicação: {{date}}</small>
+    </div>
+</div>
+{{else}}
+    <h5>Nenhuma postagem</h5>
+{{/each}}

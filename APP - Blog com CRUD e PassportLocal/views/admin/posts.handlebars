@@ -1,0 +1,32 @@
+<h4>Postagens</h4>
+<hr>
+<a href="/admin/posts/add" class="btn btn-success">Nova Postagem</a>
+
+{{#each posts}}
+    <div class="card mt-4">
+        <div class="card-body">
+
+            <h4>{{title}}</h4>
+            <p>Descrição: {{description}}</p>
+            <small>Data: {{date}}</small><br>
+            <small>Categoria: {{category.name}}</small><br>
+            <a href="/admin/posts/edit/{{_id}}" class="btn btn-success mt-3">Editar postagem</a>
+            <a href="/admin/posts/delete/{{_id}}" class="btn btn-danger mt-3">Deletar postagem</a>
+
+            <!-- código abaixo foi excluído pelo professor! -->
+            <!--
+            <h4>{{name}}</h4>
+            <small>Slug: {{slug}}</small><br>
+            <small>Data de criação: {{date}}</small><br>
+            <a href="/admin/categories/edit/{{_id}}" class="btn btn-success mt-3">Editar Categoria</a>
+            <form action="/admin/categories/delete" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-2">Deletar Categoria</button>
+            </form>
+            -->
+
+        </div>
+    </div>
+{{else}}
+    <p>Nenhuma postagem registrada!</p>
+{{/each}}
