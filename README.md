@@ -136,6 +136,10 @@ server.listen(8080, () => { console.log('listening on 8080') });
    - [https://www.npmjs.com/package/uuid](https://www.npmjs.com/package/uuid)
 - Query String
    - [https://www.npmjs.com/package/query-string](https://www.npmjs.com/package/query-string)
+- DataBases
+   - [https://knexjs.org/](https://knexjs.org/)
+      - https://devhints.io/knex
+   - [https://sequelize.org/](https://sequelize.org/)
 - JSON-SERVER
    - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
 - Logging
