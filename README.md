@@ -19,6 +19,7 @@
 - https://www.udemy.com/course/nodejs-the-complete-guide/
 - https://www.luiztools.com.br/
 - [Google Chrome Developers YouTube](https://www.youtube.com/c/GoogleChromeDevelopers)
+- [Curso de Node.JS - Victor Lima - YouTube](https://www.youtube.com/watch?v=LLqq6FemMNQ&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B&ab_channel=VictorLima-GuiadoProgramador)
 
 ## Resources
 - https://github.com/sindresorhus/awesome-nodejs
