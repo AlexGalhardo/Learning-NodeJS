@@ -1,10 +1,33 @@
+## Others
+- https://nodejs.dev/learn
+- [YouTube Grátis - Curso de Node.js do zero a produção!! Construindo uma API com Typescript, Jest, TDD e muito mais - Waldemar Neto](https://www.youtube.com/watch?v=W2ld5xRS3cY&list=PLz_YTBuxtxt6_Zf1h-qzNsvVt46H8ziKh&index=2&ab_channel=WaldemarNeto-DevLab)
+- https://heynode.com/
+- https://opensource.com/article/19/8/what-are-environment-variables
+- https://erickwendel.teachable.com/
+- https://www.udemy.com/course/the-complete-nodejs-developer-course-2/
+- https://www.udemy.com/course/nodejs-the-complete-guide/
+- https://www.luiztools.com.br/
+- [Google Chrome Developers YouTube](https://www.youtube.com/c/GoogleChromeDevelopers)
+- [Curso de Node.JS - Victor Lima - YouTube](https://www.youtube.com/watch?v=LLqq6FemMNQ&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B&ab_channel=VictorLima-GuiadoProgramador)
+
+## Resources
+- https://github.com/sindresorhus/awesome-nodejs
+- https://www.npmjs.com/package/insomnia-documenter
+- https://swagger.io/
+- https://randomkeygen.com/
+
+
+## FREE APIs to Play
+- https://jsonplaceholder.typicode.com/
+- http://api.vagalume.com.br/docs/
+- https://pokeapi.co/
+- https://swapi.dev/
+
 ## Tips
 - https://tipscode.com.br/melhores-praticas-em-nodejs-para-ambientes-de-producao
 - https://tipscode.com.br/10-boas-praticas-do-nodejs-em-producao-passo-a-passo
 - https://tipscode.com.br/como-construir-uma-api-restful-conheca-as-13-melhores-boas-praticas
 - https://tipscode.com.br/event-loop-em-node-guia-completo
-
-
 - https://blog.risingstack.com/node-js-logging-tutorial/
 - https://expressjs.com/pt-br/advanced/best-practice-security.html
 
