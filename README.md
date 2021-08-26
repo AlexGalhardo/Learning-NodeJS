@@ -7,7 +7,94 @@
 - https://www.origamid.com/slide/javascript-completo-es6/#/0101-javascript-completo-es6/11
 - [Talk #27 - JavaScript Event Loop (Parte 1)](https://www.youtube.com/watch?v=va8-xdxTywU)
 - [Mas que diabos é o loop de eventos? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=0s)
+- [Javascript & Node.js: Do baixo ao alto nível](https://www.youtube.com/watch?v=M6wLBpzSvqw)
 ![event_loop](https://user-images.githubusercontent.com/19540357/128660447-0b1ef65c-b7b1-4277-b510-5a66b5fc8138.jpg)
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Processo</th>
+<th>Thread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Execução</td>
+<td>Linha própria</td>
+<td>Linha própria</td>
+</tr>
+<tr>
+<td>Memória global (heap e data segmnent)</td>
+<td>Própria</td>
+<td>Compartilhada</td>
+</tr>
+<tr>
+<td>Memória local (stack, registers, PCounter)</td>
+<td>Sim</td>
+<td>Geralmente</td>
+</tr>
+<tr>
+<td>Consumo de memória</td>
+<td>Normal</td>
+<td>Ligeiramente menor</td>
+</tr>
+<tr>
+<td>Manipuladores de recursos externos</td>
+<td>Proprietário</td>
+<td>Empresta do processo</td>
+</tr>
+<tr>
+<td>Tempo de criação</td>
+<td>Relativamente longo</td>
+<td>Relativamente curto</td>
+</tr>
+<tr>
+<td>Tempo de troca de contexto</td>
+<td>Relativamente longo</td>
+<td>Relativamente curto</td>
+</tr>
+<tr>
+<td>Instâncias</td>
+<td>Múltiplas</td>
+<td>Múltiplas</td>
+</tr>
+<tr>
+<td>Associação</td>
+<td>Um programa (executável)</td>
+<td>Um processo</td>
+</tr>
+<tr>
+<td>Paralelismo</td>
+<td>Limitado</td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>Comunicação entre seus pares</td>
+<td>Só com um mecanismo de IPC</td>
+<td>Sim, dentro do processo</td>
+</tr>
+<tr>
+<td>Eficiência de comunicação</td>
+<td>Não</td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>Comunicação direta com o OS</td>
+<td>Sim</td>
+<td>Não</td>
+</tr>
+<tr>
+<td>Controle de exceções</td>
+<td>Próprio</td>
+<td>Próprio</td>
+</tr>
+<tr>
+<td>Confiabilidade e segurança</td>
+<td>Sim</td>
+<td>Depende do código</td>
+</tr>
+</tbody>
+</table>
 
 ## Others
 - https://nodejs.dev/learn
