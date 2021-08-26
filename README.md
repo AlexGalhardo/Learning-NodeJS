@@ -225,21 +225,21 @@
 
 ## Import/Export Modules
 
-#### Older module.exports
-- Math.ts
+#### Older module.exports (ES5)
+- Math.js
 ```ts
 function sum(x:number, y:number):number {
  return x+y;
 }
-module.exports.sum = sum;
+module.exports = sum;
 ```
-- index.ts
+- index.js
 ```ts
 const Math = require('./Math');
 console.log(`SUM: ${Math.sum(n1,n2)}`);
 ```
 
-#### Modern Object
+#### Modern Object (ES6+)
 - Math.ts
 ```ts
 function sum(x:number, y:number):number {
@@ -255,7 +255,7 @@ import * as Math from './Math';
 console.log(`SUM: ${Math.sum(2,3)}`); // SUM: 5
 ```
 
-#### Modern Functions
+#### Modern Functions (ES6+)
 - Math.ts
 ```ts
 export function sum(x:number, y:number):number {
