@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PAGARME CHECKOUT</title>
+	<link rel="stylesheet" href="">
+	<script src="https://assets.pagar.me/checkout/1.1.0/checkout.js"></script>
+</head>
+<body>
+	<button class="btn btn-outline-success" id="pagarme_pay_button">Pay with PagarME</button>
+
+	<script>
+    	var button = document.querySelector('#pagarme_pay_button');
+    	/*
+		 "card_number": "4111111111111111",
+    	"card_cvv": "123",
+    	"card_expiration_date": "0922",
+    	"card_holder_name": "Morpheus Fishburne",
+    	*/
+
+        button.addEventListener('click', function() {
+	        function handleSuccess (data) {
+	            console.log('success é', data);
+	        }
+
+	        function handleError (data) {
+	            console.log(data);
+	        }
+
+	        var checkout = new PagarMeCheckout.Checkout({
+	            encryption_key: 'ek_test_hgxZnjj6oMglBivPOMQcCXO5ws02Pk',
+	            success: handleSuccess,
+	            error: handleError
+	        });
+
+	        checkout.open({
+	            paymentButtonText: 'Finalizar',
+	            amount: 10000,
+	            maxInstallments: 3,
+	            defaultInstallment: 1,
+	            customerData: 'true',
+	            createToken: 'true',
+	            paymentMethods: 'pix,boleto,credit_card',
+	            uiColor: '#1ea51c',
+	            boletoDiscountPercentage: 10,
+	            boletoExpirationDate: '30/08/2021',
+	            pixExpirationDate: '2021-12-31',
+	            postbackUrl: "http://localhost:3000/shop/pagarme/status",
+	            items: [
+	              {
+	                id: '1',
+	                title: 'Oranges',
+	                unit_price: 49,
+	                quantity: 1,
+	                tangible: true
+	              },
+	              {
+	                id: '2',
+	                title: 'Grapes',
+	                unit_price: 99,
+	                quantity: 1,
+	                tangible: true
+	              },
+	              {
+	                id: '3',
+	                title: 'Apples',
+	                unit_price: 199,
+	                quantity: 1,
+	                tangible: true
+	              },
+	              {
+	                id: '4',
+	                title: 'Strawberries',
+	                unit_price: 299,
+	                quantity: 1,
+	                tangible: true
+	              }
+	            ]
+	        })
+	    });
+    </script>
+	
+</body>
+</html>
