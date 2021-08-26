@@ -228,7 +228,7 @@
 #### Older module.exports (ES5)
 - Math.js
 ```ts
-function sum(x:number, y:number):number {
+function sum(x, y) {
  return x+y;
 }
 module.exports = sum;
