@@ -27,10 +27,9 @@
 
 - GET PLATFORM
 ```js
-const express = require ('express')
 const bodyParser = require ('body-parser') 
 const os = require ('os')
-const app = express ()
+const app = require ('express')()
 
 app.use (bodyParser.json ())
 app.use (bodyParser.urlencoded ({extended: true}))

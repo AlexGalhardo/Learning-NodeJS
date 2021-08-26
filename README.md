@@ -141,6 +141,8 @@
 - $ sudo npm cache clean -f
 - $ sudo npm install -g n
 - $ sudo n stable
+- https://github.com/nvm-sh/nvm
+- $ sudo npm install -g npm
 
 ## Enforce HTTPS in Express Localhost
 - sudo openssl req -x509 -newkey rsa:2048 -keyout keytmp.pem -out cert.pem -days 365
@@ -259,25 +261,7 @@ server.listen(8080, () => { console.log('listening on 8080') });
    - "rootDir": "./src", 
    - "module": "commonjs",
    - "moduleResolution": "node"
-- nodemon.json
-```json
-{
- "restartable": "rs",
- "ignore": [
-   ".git",
-   "dist",
-   "node_modules/**/node_modules"
- ],
- "verbose": true,
- "events": {
-   "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
- },
- "env": {
-   "NODE_ENV": "development"
- },
- "ext": "ts,json"
-}
-```
+
 
 ## Using Bcrypt Example
 - $ npm install bcrypt
