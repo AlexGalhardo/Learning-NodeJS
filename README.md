@@ -127,9 +127,10 @@
 - $ sudo npm install -g npm
 
 ## Modules/Packages
-- HTTP
+- HTTP Requests
    - [https://www.npmjs.com/package/node-fetch](https://www.npmjs.com/package/node-fetch)
-- Express
+   - [https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
+- HTTP Server
    - [https://expressjs.com/pt-br/](https://expressjs.com/pt-br/)
    - [https://express-validator.github.io/docs/](https://express-validator.github.io/docs/)
    - [https://www.npmjs.com/package/express-jwt](https://www.npmjs.com/package/express-jwt)
@@ -186,6 +187,7 @@
    - [https://www.npmjs.com/package/nodemailer](https://www.npmjs.com/package/nodemailer)
    - [https://ethereal.email/](https://ethereal.email/)
    - [https://webhook.site/](https://webhook.site/)
+   - [https://mailtrap.io/](https://mailtrap.io/)
 - Slug
    - [https://www.npmjs.com/package/slug](https://www.npmjs.com/package/slug)
 - .env
@@ -216,7 +218,7 @@
 
 
 ## TypeScrypt
-- $ sudo npm install -g nodemon typescript ts-node
+- $ sudo npm install -g tsc typescript ts-node
 - $ npm install --save-dev @types/express @types/mustache-express @types/node copyfiles
 - $ tsc --init
 - $ tsc -w (ficar monitorando typescript)
