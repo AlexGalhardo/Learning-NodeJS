@@ -176,10 +176,16 @@
    - [https://www.npmjs.com/package/passport-local-mongoose](https://www.npmjs.com/package/passport-local-mongoose)
    - [https://www.npmjs.com/package/passport-local](https://www.npmjs.com/package/passport-local)
    - [https://www.npmjs.com/package/connect-ensure-login](https://www.npmjs.com/package/connect-ensure-login)
+- Uploads
+   - [https://www.npmjs.com/package/multer](https://www.npmjs.com/package/multer)
+   - [https://www.npmjs.com/package/sharp](https://www.npmjs.com/package/sharp)
 - Dates & Times
    - [https://www.npmjs.com/package/moment](https://www.npmjs.com/package/moment)
+   - [https://www.npmjs.com/package/date-fns](https://www.npmjs.com/package/date-fns)
 - EMAIL SMTP
    - [https://www.npmjs.com/package/nodemailer](https://www.npmjs.com/package/nodemailer)
+   - [https://ethereal.email/](https://ethereal.email/)
+   - [https://webhook.site/](https://webhook.site/)
 - Slug
    - [https://www.npmjs.com/package/slug](https://www.npmjs.com/package/slug)
 - .env
