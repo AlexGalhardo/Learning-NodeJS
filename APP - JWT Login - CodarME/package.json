@@ -1,0 +1,19 @@
+{
+  "name": "lesson-node-auth",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon -- -r esm -r dotenv/config index.js"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.3",
+    "restify": "^8.5.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.2"
+  }
+}

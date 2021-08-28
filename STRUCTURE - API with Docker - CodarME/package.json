@@ -1,0 +1,20 @@
+{
+  "name": "node-api",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+    "scripts": {
+    "dev": "nodemon -- -r esm -r dotenv/config index.js",
+    "start": "pm2 start index.js --watch --no-daemon --node-args=\"-r esm\""
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "mongoose": "^5.8.7",
+    "pm2": "^4.2.1",
+    "restify": "^8.5.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
+  }
+}
