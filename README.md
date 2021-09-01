@@ -136,8 +136,7 @@
    - [https://www.npmjs.com/package/express-jwt](https://www.npmjs.com/package/express-jwt)
    - [https://www.npmjs.com/package/express-mysql-session](https://www.npmjs.com/package/express-mysql-session)
    - [https://www.npmjs.com/package/express-session](https://www.npmjs.com/package/express-session)
-   - Articles
-      - https://expressjs.com/en/advanced/best-practice-performance.html
+   - [https://expressjs.com/en/advanced/best-practice-performance.html](https://expressjs.com/en/advanced/best-practice-performance.html)
 - Debug
    - [https://www.npmjs.com/package/debug](https://www.npmjs.com/package/debug)
 - File System
@@ -194,8 +193,8 @@
    - [https://www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
 - Assets Compression
    - [https://www.npmjs.com/package/compression](https://www.npmjs.com/package/compression)
-- Security HTTP Headers
-   - [https://helmetjs.github.io/](https://helmetjs.github.io/)
+- SMS/WhatsAPP
+   - [https://www.npmjs.com/package/twilio](https://www.npmjs.com/package/twilio)
 - UUID
    - [https://www.npmjs.com/package/uuid](https://www.npmjs.com/package/uuid)
 - Query String
@@ -212,9 +211,6 @@
    - [https://www.npmjs.com/package/morgan](https://www.npmjs.com/package/morgan)
 - FAKE DATA
    - [https://github.com/Marak/faker.js](https://github.com/Marak/faker.js)
-- Production
-   - [https://www.npmjs.com/package/pm2](https://www.npmjs.com/package/pm2)
-   - [https://www.npmjs.com/package/@sentry/node](https://www.npmjs.com/package/@sentry/node)
 
 
 ## TypeScrypt
@@ -230,6 +226,23 @@
    - "rootDir": "./src", 
    - "module": "commonjs",
    - "moduleResolution": "node"
+
+## Performance e Best Practices
+- HTTP/2
+   - [https://nodejs.org/api/http2.html](https://nodejs.org/api/http2.html)
+- gRPC
+   - [https://grpc.io/docs/languages/node/](https://grpc.io/docs/languages/node/)
+- Cluster
+   - [https://www.npmjs.com/package/pm2](https://www.npmjs.com/package/pm2)
+   - [https://pm2.keymetrics.io/](https://pm2.keymetrics.io/)
+- Errors Logging
+   - [https://www.npmjs.com/package/@sentry/node](https://www.npmjs.com/package/@sentry/node)
+- Hateoas
+   - [https://restfulapi.net/hateoas/](https://restfulapi.net/hateoas/)
+- Security HTTP Headers
+   - [https://helmetjs.github.io/](https://helmetjs.github.io/)
+- Loading Testing
+   - [https://artillery.io/](https://artillery.io/)
 
 ## Import/Export Modules
 
