@@ -119,12 +119,18 @@
    - $ npm i -D @types/body-parser
       - -D = --save-dev
 
-## Latest Stable Version
+## Latest Node Stable Version
 - $ sudo npm cache clean -f
 - $ sudo npm install -g n
 - $ sudo n stable
 - https://github.com/nvm-sh/nvm
+
+## NPM
 - $ sudo npm install -g npm
+
+## YARN
+- https://yarnpkg.com/getting-started/install
+- $ sudo npm install -g yarn
 
 ## Modules/Packages
 - HTTP Requests
