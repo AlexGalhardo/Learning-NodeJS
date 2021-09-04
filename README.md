@@ -211,10 +211,11 @@
    - [https://sequelize.org/](https://sequelize.org/)
 - JSON-SERVER
    - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
-- Logging
+- Logs
    - [https://www.npmjs.com/package/bunyan](https://www.npmjs.com/package/bunyan)
    - [https://www.npmjs.com/package/winston](https://www.npmjs.com/package/winston)
    - [https://www.npmjs.com/package/morgan](https://www.npmjs.com/package/morgan)
+   - [https://www.npmjs.com/package/pino](https://www.npmjs.com/package/pino)
 - FAKE DATA
    - [https://github.com/Marak/faker.js](https://github.com/Marak/faker.js)
 
@@ -233,7 +234,7 @@
    - "module": "commonjs",
    - "moduleResolution": "node"
 
-## Performance e Best Practices
+## Performance and Best Practices
 - HTTP/2
    - [https://nodejs.org/api/http2.html](https://nodejs.org/api/http2.html)
 - gRPC
