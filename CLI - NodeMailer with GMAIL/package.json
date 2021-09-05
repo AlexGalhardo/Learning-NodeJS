@@ -1,0 +1,12 @@
+{
+  "name": "code-pills-01-nodemailer-com-gmail",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.4.6"
+  },
+  "scripts": {
+    "start": "node src"
+  }
+}

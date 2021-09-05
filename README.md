@@ -162,6 +162,8 @@
    - [https://visionmedia.github.io/superagent/](https://visionmedia.github.io/superagent/)
 - .gitginore
    - [https://www.npmjs.com/package/gitignore](https://www.npmjs.com/package/gitignore)
+- PDF
+   - [https://www.npmjs.com/package/html-pdf](https://www.npmjs.com/package/html-pdf)
 - CLI
    - [https://www.npmjs.com/package/commander](https://www.npmjs.com/package/commander)
    - [https://www.npmjs.com/package/chalk](https://www.npmjs.com/package/chalk)
@@ -197,10 +199,12 @@
    - [https://www.npmjs.com/package/slug](https://www.npmjs.com/package/slug)
 - .env
    - [https://www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
-- Assets Compression
+- Responses Compression
    - [https://www.npmjs.com/package/compression](https://www.npmjs.com/package/compression)
 - SMS/WhatsAPP
    - [https://www.npmjs.com/package/twilio](https://www.npmjs.com/package/twilio)
+- Browser
+   - [https://www.npmjs.com/package/puppeteer](https://www.npmjs.com/package/puppeteer)
 - UUID
    - [https://www.npmjs.com/package/uuid](https://www.npmjs.com/package/uuid)
 - Query String
@@ -244,6 +248,7 @@
    - [https://pm2.keymetrics.io/](https://pm2.keymetrics.io/)
 - Errors Logging
    - [https://www.npmjs.com/package/@sentry/node](https://www.npmjs.com/package/@sentry/node)
+   - [https://www.npmjs.com/package/express-async-errors](https://www.npmjs.com/package/express-async-errors)
 - Hateoas
    - [https://restfulapi.net/hateoas/](https://restfulapi.net/hateoas/)
 - Security HTTP Headers
