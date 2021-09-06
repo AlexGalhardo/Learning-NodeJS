@@ -256,6 +256,12 @@
 - Loading Testing
    - [https://artillery.io/](https://artillery.io/)
 
+## SSL/HTTPS
+- [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert)
+- [https://letsencrypt.org/pt-br/](https://letsencrypt.org/pt-br/)
+- [https://certbot.eff.org/](https://certbot.eff.org/)
+- [SegInfoBrasil - YouTube](https://www.youtube.com/channel/UCz9M2hHURsenUWxXBk3TR8A)
+
 ## Import/Export Modules
 
 #### Older module.exports (ES5)
