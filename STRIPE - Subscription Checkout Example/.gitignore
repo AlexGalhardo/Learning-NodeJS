@@ -1,0 +1,34 @@
+.env
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# Dotnet files
+**/Debug/**
+**/project-cache/**
+**/.vs/**
+**/obj/**
+
+# Node files
+node_modules/
+
+# Ruby files
+Gemfile.lock
+.bundle
+.byebug_history
+
+# Python files
+__pycache__
+venv
+env
+
+# PHP files
+vendor
+logs
+
+# Java files
+.settings
+target/
+.classpath
+.factorypath
+.project
