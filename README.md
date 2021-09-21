@@ -205,8 +205,9 @@
    - [https://www.npmjs.com/package/twilio](https://www.npmjs.com/package/twilio)
 - Browser
    - [https://www.npmjs.com/package/puppeteer](https://www.npmjs.com/package/puppeteer)
-- UUID
+- ID
    - [https://www.npmjs.com/package/uuid](https://www.npmjs.com/package/uuid)
+   - [https://www.npmjs.com/package/nanoid](https://www.npmjs.com/package/nanoid)
 - Query String
    - [https://www.npmjs.com/package/query-string](https://www.npmjs.com/package/query-string)
 - DataBases
@@ -225,10 +226,15 @@
 
 
 ## TypeScrypt
-- $ sudo npm install -g tsc typescript ts-node
-- $ npm install --save-dev @types/express @types/mustache-express @types/node copyfiles
-- $ tsc --init
-- $ tsc -w (ficar monitorando typescript)
+- Links
+   - https://www.typescriptlang.org/
+   - https://www.typescriptlang.org/play
+   - https://stackblitz.com/edit/typescript-dh6svr?file=example%2Fsupermario.ts
+- Comands
+   - $ sudo npm install -g tsc typescript ts-node
+   - $ npm install --save-dev @types/express @types/mustache-express @types/node copyfiles
+   - $ tsc --init
+   - $ tsc -w (ficar monitorando typescript)
 - package.json
    - "scripts":
       - "start": "tsc ; nodemon ./dist/app",
