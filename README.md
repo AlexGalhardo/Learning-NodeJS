@@ -701,7 +701,7 @@ import bcrypt from 'bcryptjs';
 let connection = null
 try {
     connection = mysql2.createPool({
-        host: '172.18.0.3', // DOCKER IPv4 Address Here (sudo docker inspect galhardoapp_mysql)
+        host: '172.18.0.3', // DOCKER IPv4 Address Here (use $ sudo docker inspect galhardoapp_mysql)
         user: 'root',
         password: 'root',
         database: 'galhardoapp',
@@ -891,13 +891,84 @@ class Users {
     }
 
 
-    static async verifyLoginGitHub(github_id, email, avatar){}
+    static async verifyLoginGitHub(email, github_id, avatar){
+        try {
+            let stmt = `SELECT *
+                        FROM users
+                        WHERE email = '${email}'`
+
+            const [ rows ] = await MYSQL.execute(stmt);
+
+            if(rows.length > 0){
+                stmt = `UPDATE users
+                        SET 
+                            github_id = '${github_id}',
+                            avatar = '${avatar}'
+                        WHERE email = '${email}'`
+
+                await MYSQL.execute(stmt);
+            }
+
+            console.log('verifyLoginGitHub: ', rows ? rows : null)
+
+            // return rows ? rows : null
+        } catch(error){
+            throw new Error(error)
+        }
+    }
 
 
-    static async verifyLoginGoogle(google_id, email, avatar){}
+    static async verifyLoginGoogle(email, google_id, avatar){
+        try {
+            let stmt = `SELECT *
+                        FROM users
+                        WHERE email = '${email}'`
+
+            const [ rows ] = await MYSQL.execute(stmt);
+
+            if(rows.length > 0){
+                stmt = `UPDATE users
+                        SET 
+                            google_id = '${google_id}',
+                            avatar = '${avatar}'
+                        WHERE email = '${email}'`
+
+                await MYSQL.execute(stmt);
+            }
+
+            console.log('verifyLoginGoogle: ', rows ? rows : null)
+
+            // return rows ? rows : null
+        } catch(error){
+            throw new Error(error)
+        }
+    }
 
 
-    static async verifyLoginFacebook(facebook_id, email){}
+    static async verifyLoginFacebook(email, facebook_id){
+        try {
+            let stmt = `SELECT *
+                        FROM users
+                        WHERE email = '${email}'`
+
+            const [ rows ] = await MYSQL.execute(stmt);
+
+            if(rows.length > 0){
+                stmt = `UPDATE users
+                        SET 
+                            facebook_id = '${facebook_id}'
+                        WHERE email = '${email}'`
+
+                await MYSQL.execute(stmt);
+            }
+
+            console.log('verifyLoginFacebook: ', rows ? rows : null)
+
+            // return rows ? rows : null
+        } catch(error){
+            throw new Error(error)
+        }
+    }
 
 
     static async updateResetPasswordToken(email){
@@ -943,7 +1014,19 @@ class Users {
                         SET 
                             name = '${userObject.name}',
                             email = '${userObject.email}',
-                            document = '${userObject.document}'
+                            password = '${userObject.password}',
+                            document = '${userObject.document}',
+                            phone_country = '${userObject.phone_country}',
+                            phone_ddd = '${userObject.phone_ddd}',
+                            phone_number = '${userObject.phone_number}',
+                            birthday = '${userObject.birthday}',
+                            address_zipcode = '${userObject.address_zipcode}',
+                            address_street = '${userObject.address_street}',
+                            address_street_number = '${userObject.address_street_number}',
+                            address_neighborhood = '${userObject.address_neighborhood}',
+                            address_city = '${userObject.address_city}',
+                            address_state = '${userObject.address_state}',
+                            address_country = '${userObject.address_country}'
                         WHERE id = '${userObject.id}'`
 
             const [ rows ] = await MYSQL.execute(stmt);
@@ -1111,7 +1194,7 @@ class Users {
                                 pagarme_subscription_cancel_at_period_end,
                                 created_at,
                                 updated_at)
-                    VALUES (?, 
+                    VALUES (?,
                             ?, 
                             ?, 
                             ?, 
@@ -1242,13 +1325,6 @@ async function testModelUser(){
 
     await Users.verifyLogin('test@gmail.com', 'test123') // return user object if true, null if false
 
-    await Users.updateProfile({
-        id: '30555547-6c7d-473b-931f-1cffef121c98',
-        name: 'Neo',
-        email: 'neo@gmail.com',
-        document: '1111111111'
-    }) // return void
-
     await Users.updateAvatarName('test@gmail.com', 'test_avatar.png') // return void
 
     await Users.updatePagarmeCustomerID('test@gmail.com', '87687123') // return void
@@ -1267,10 +1343,34 @@ async function testModelUser(){
         start: '23/09/2021 18:32:45',
         end: '23/10/2021 18:32:45',
         cancel_at_period_end: 0 
-    }) // return void
+    }) // return void  
 
-    await Users.deleteProfile('test@gmail.com', 'test123') // return void
+    await Users.updateProfile({
+        id: '868606ab-d227-40f0-8cfb-7a6c20d89b5c',
+        name: 'Updated_name',
+        email: 'new_email_updated@gmail.com',
+        password: 'test987',
+        document: '1111111111',
+        phone_country: '+55',
+        phone_ddd: '18',
+        phone_number: '999999999',
+        birthday: '23-09-2020',
+        address_zipcode: '13560290',
+        address_street: 'Rua logo ali',
+        address_street_number: 42,
+        address_neighborhood: 'Bairro Top',
+        address_city: 'São Paulo',
+        address_state: 'SP',
+        address_country: 'Brazil'
+    }) 
+
+    // await Users.verifyLoginGitHub('test@gmail.com', 'github_id_here', 'github_avatar.png')
+    // await Users.verifyLoginGoogle('test@gmail.com', 'google_id_here', 'google_avatar.png')
+    // await Users.verifyLoginFacebook('test@gmail.com', 'facebook_id_here', 'facebook_avatar.png')
+
+    // await Users.deleteProfile('test@gmail.com', 'test123') // return void
 }
 
 testModelUser()
+
 ```
