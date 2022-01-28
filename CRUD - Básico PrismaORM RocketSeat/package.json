@@ -1,0 +1,31 @@
+{
+  "name": "prismaio_rocketseat",
+  "version": "1.0.0",
+  "description": "- npm i prisma",
+  "main": "index.js",
+  "scripts": {
+    "create": "npx ts-node-dev create.ts",
+    "findOne": "npx ts-node-dev findOne.ts",
+    "update": "npx ts-node-dev update.ts",
+    "createCourse": "npx ts-node-dev createCourse.ts",
+    "createExistTeacher": "npx ts-node-dev createExistTeacher.ts",
+    "createNotExistTeacher": "npx ts-node-dev createNotExistTeacher.ts",
+    "createFKTeacher": "npx ts-node-dev createFKTeacher.ts",
+    "findRelation": "npx ts-node-dev findRelation.ts",
+    "createAuthor": "npx ts-node-dev createAuthor.ts",
+    "createBook": "npx ts-node-dev createBook.ts",
+    "mtm_create": "npx ts-node-dev mtm_create.ts",
+    "filterStartWith": "npx ts-node-dev filterStartWith.ts",
+    "queryRaw": "npx ts-node-dev queryRaw.ts",
+    "pagination": "npx ts-node-dev pagination.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.7.0",
+    "prisma": "^3.7.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  }
+}

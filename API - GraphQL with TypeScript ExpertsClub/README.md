@@ -1,0 +1,2 @@
+- https://github.com/rocketseat-experts-club/nodejs-graphql-typeorm-typegraphql-2021-11-04
+- https://app.rocketseat.com.br/experts-club/lesson/api-graph-ql-com-node-js-type-orm-e-type-graph-ql

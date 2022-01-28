@@ -1,0 +1,3 @@
+- npm prisma init 
+- npx prisma db push
+- npx prisma migrate dev

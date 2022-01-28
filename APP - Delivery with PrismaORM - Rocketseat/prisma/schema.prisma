@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Deliveryman {
+  id       String @id @default(uuid())
+  username String @unique
+  password String
+
+  deliveries Deliveries[]
+  @@map("deliveryman")
+}
+
+model Clients {
+  id       String @id @default(uuid())
+  username String @unique
+  password String
+
+  deliveries Deliveries[]
+  @@map("clients")
+}
+
+model Deliveries {
+  id             String       @id @default(uuid())
+  id_client      String
+  client         Clients      @relation(fields: [id_client], references: [id])
+  id_deliveryman String?
+  deliveryman    Deliveryman? @relation(fields: [id_deliveryman], references: [id])
+  item_name      String
+  created_at     DateTime     @default(now())
+  end_at         DateTime?
+
+  @@map("deliveries")
+}

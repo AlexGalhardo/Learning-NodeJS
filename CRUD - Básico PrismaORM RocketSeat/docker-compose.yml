@@ -1,0 +1,54 @@
+# https://hub.docker.com/_/mongo
+# https://hub.docker.com/_/mongo-express
+# https://hub.docker.com/r/mongoclient/mongoclient
+# https://hub.docker.com/_/adminer
+# https://hub.docker.com/_/mysql
+# https://hub.docker.com/_/postgres
+
+# $ sudo docker-compose up -d
+# $ sudo docker-compose ps
+# $ sudo docker-compose ps -a
+# $ sudo docker-compose restart
+# $ sudo docker-compose down
+# $ sudo docker-compose down
+# $ sudo docker-compose down -v
+# $ sudo docker-compose up -d --remove-orphans
+
+# $ sudo docker network ls
+
+# $ sudo docker rm -f CONTAINER_ID
+# $ sudo docker rmi -f IMAGE_ID
+
+# $ sudo docker inspect CONTAINER_NAME_OR_ID
+
+version: '3'
+
+services:
+
+  prismaio_pg:
+    image: postgres
+    container_name: prismaio_pg
+    environment:
+      POSTGRES_PASSWORD: "root"
+    ports:
+      - "15432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    networks:
+      - prismaio_network
+
+  # POSTGRE username: postgres | password: root |server: prismaio_pg
+  prismaio_adminer:
+    image: adminer
+    container_name: prismaio_adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - prismaio_network
+
+networks:
+  prismaio_network:
+    driver: bridge
+
+volumes:
+  postgres-data: null

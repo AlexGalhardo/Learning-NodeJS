@@ -1,0 +1,13 @@
+{
+  "type": "postgres",
+  "port": 5432,
+  "host": "172.29.0.2",
+  "username": "postgres",
+  "password": "root",
+  "database": "petshop",
+  "logging": true,
+  "synchronize": true,
+  "entities": [
+    "./src/modules/**/database/entities/*.ts"
+  ]
+}
