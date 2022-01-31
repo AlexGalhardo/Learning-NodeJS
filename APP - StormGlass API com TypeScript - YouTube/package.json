@@ -1,0 +1,38 @@
+{
+  "name": "finding-waves",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-error-boundary": "^1.2.5",
+    "react-query": "^2.0.3",
+    "react-query-devtools": "^1.1.5",
+    "react-router": "^6.0.0-alpha.3",
+    "react-router-dom": "^6.0.0-alpha.3",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "PORT=3001 SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "lint": "eslint . --cache-location node_modules/.cache/eslint",
+    "format": "prettier --write \"**/*.+(js|json|css|md|mdx|html)\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
