@@ -138,6 +138,7 @@
    - [https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
 - HTTP Server
    - [https://expressjs.com/pt-br/](https://expressjs.com/pt-br/)
+   - [https://www.npmjs.com/package/express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
    - [https://express-validator.github.io/docs/](https://express-validator.github.io/docs/)
    - [https://www.npmjs.com/package/express-jwt](https://www.npmjs.com/package/express-jwt)
    - [https://www.npmjs.com/package/express-mysql-session](https://www.npmjs.com/package/express-mysql-session)
@@ -223,6 +224,12 @@
    - [https://www.npmjs.com/package/pino](https://www.npmjs.com/package/pino)
 - FAKE DATA
    - [https://github.com/Marak/faker.js](https://github.com/Marak/faker.js)
+- REDIS
+  - [https://www.npmjs.com/package/rate-limit-redis](https://www.npmjs.com/package/rate-limit-redis)
+- VALIDATION 
+  - [https://www.npmjs.com/package/yup](https://www.npmjs.com/package/yup)
+- DOCUMENTATION
+  - [https://github.com/danielgtaylor/aglio](https://github.com/danielgtaylor/aglio)
 
 
 ## TypeScrypt
