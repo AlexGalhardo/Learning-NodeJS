@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String     @id @default(uuid()) @db.Uuid
+  name         String
+  telegramId   String     @unique
+  registeredAt DateTime   @default(now())
+  weighings    Weighing[]
+}
+
+model Weighing {
+  id        String   @id @default(uuid()) @db.Uuid
+  createdAt DateTime @default(now())
+  baseDate  DateTime @default(now())
+  weight    Decimal
+  User      User?    @relation(fields: [userId], references: [id])
+  userId    String?  @db.Uuid
+}

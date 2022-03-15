@@ -1,0 +1,27 @@
+scalar Date
+
+type Post {
+  _id: ID
+  content: String
+  author: User
+  createdAt: Date
+}
+
+type User {
+  _id: ID
+  name: String
+  username: String
+}
+
+input PostInput {
+  content: String!
+  author: ID!
+}
+
+type Mutation {
+  createPost(input: PostInput): Post
+}
+
+type Query {
+  getPostByUser(idUser: ID): [Post]
+}

@@ -1,0 +1,11 @@
+sudo docker run \
+    --name mongodb \
+    -p 27017:27017 \
+    -e MONGO_INITDB_ROOT_USERNAME=admin \
+    -e MONGO_INITDB_ROOT_PASSWORD=root \
+    -d \
+    mongo:4
+
+sudo docker exec -it mongodb \
+    mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin \
+    --eval "db.getSiblingDB('graphql').createUser({user: 'alex', pwd: 'root', roles: [{role: 'readWrite', db: 'graphql'}]})"
