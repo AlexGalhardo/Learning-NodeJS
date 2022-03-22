@@ -1,0 +1,36 @@
+{
+	"clients": [
+		{
+			"id": 1,
+			"name": "Fernando Silva",
+			"email": "fernando@email.com.br",
+			"address": {
+				"street": "Rua JavaScript vanilla",
+				"number": "243"
+			}
+		},
+		{
+			"id": 2,
+			"name": "Maria Silva",
+			"email": "maria@email.com.br",
+			"address": {
+				"street": "Rua ReactJS",
+				"number": "211"
+			}
+		},
+		{
+			"id": 3,
+			"name": "Lucas Silva",
+			"email": "lucas@email.com.br",
+			"address": {
+				"street": "Rua GraphQL",
+				"number": "555"
+			}
+		}
+	],
+	"products": [
+		{ "id": 1, "name": "TV", "price": 7000.0 },
+		{ "id": 2, "name": "Notebook", "price": 2300.0 },
+		{ "id": 3, "name": "Celular", "price": 3490.0 }
+	]
+}

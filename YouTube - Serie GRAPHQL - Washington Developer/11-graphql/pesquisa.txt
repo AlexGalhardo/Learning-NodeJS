@@ -1,0 +1,9 @@
+query pesquisaDeUsuario($id: Int, $comPerfil: Boolean!, $pular: Boolean!) {
+  usuario(id: $id) {
+    nome email
+    telefone @skip(if: $pular)
+    perfil @include(if: $comPerfil) {
+      id descricao
+    }
+  }
+}

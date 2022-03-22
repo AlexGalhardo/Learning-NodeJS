@@ -1,0 +1,15 @@
+type User {
+  id: Int
+  login: String
+  avatar_url: String
+  tasks: [Task]
+}
+
+type Task {
+  title: String
+  description: String
+}
+
+type Query {
+  user(login: String): User
+}
