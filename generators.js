@@ -1,0 +1,1 @@
+- [JavaScript — Entendendo Generators](https://medium.com/trainingcenter/javascript-entendendo-generators-408cbce9aee)

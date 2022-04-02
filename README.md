@@ -1,13 +1,8 @@
 # References
-
 ## Install Ubuntu 
 - [https://snapcraft.io/node](https://snapcraft.io/node)
-
 ## Articles
-
 - [Node.js Por Baixo dos Panos #1 - Conhecendo nossas ferramentas](https://dev.to/khaosdoctor/node-js-por-baixo-dos-panos-1-conhecendo-nossas-ferramentas-34b6)
-- [JavaScript — Entendendo Generators](https://medium.com/trainingcenter/javascript-entendendo-generators-408cbce9aee)
-
 ## Event Loop
 - https://www.origamid.com/slide/javascript-completo-es6/#/0101-javascript-completo-es6/11
 - [Talk #27 - JavaScript Event Loop (Parte 1)](https://www.youtube.com/watch?v=va8-xdxTywU)
