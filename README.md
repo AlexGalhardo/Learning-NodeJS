@@ -1,6 +1,7 @@
 # References
-## Install Ubuntu 
+## Install Debian Likes
 - [https://snapcraft.io/node](https://snapcraft.io/node)
+- [https://github.com/nodesource/distributions/blob/master/README.md#debinstall](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
 ## Articles
 - [Node.js Por Baixo dos Panos #1 - Conhecendo nossas ferramentas](https://dev.to/khaosdoctor/node-js-por-baixo-dos-panos-1-conhecendo-nossas-ferramentas-34b6)
 ## Event Loop
