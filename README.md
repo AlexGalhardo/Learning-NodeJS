@@ -1,5 +1,5 @@
 # References
-## Install Debian Likes
+## Install Ubuntu
 - [https://snapcraft.io/node](https://snapcraft.io/node)
 - [https://github.com/nodesource/distributions/blob/master/README.md#debinstall](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
 ## Articles
