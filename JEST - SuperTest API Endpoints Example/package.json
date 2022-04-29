@@ -1,0 +1,23 @@
+{
+  "name": "learning_tests",
+  "version": "1.0.0",
+  "description": "learning api endpoints tests with jest and supertest",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "Alex Galhardo",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jest": "^27.2.5",
+    "supertest": "^6.1.6"
+  }
+}
