@@ -23,7 +23,7 @@
     "mongoose": "^5.3.16",
     "multer": "^1.4.1",
     "sharp": "^0.21.1",
-    "validator": "^10.9.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "env-cmd": "^8.0.2",
