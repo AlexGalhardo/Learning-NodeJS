@@ -178,6 +178,8 @@
    - [https://www.npmjs.com/package/mustache-express](https://www.npmjs.com/package/mustache-express)
 - Cache
    - [https://www.npmjs.com/package/node-cache](https://www.npmjs.com/package/node-cache)
+- Teste de Carga
+   - [AutoCannon](https://www.npmjs.com/package/autocannon)
 - Parser URL Encoded
    - [https://www.npmjs.com/package/body-parser](https://www.npmjs.com/package/body-parser)
 - Framework MVC
