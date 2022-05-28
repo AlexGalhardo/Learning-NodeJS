@@ -1,10 +1,14 @@
 # References
+
 ## Install Ubuntu
 - [https://snapcraft.io/node](https://snapcraft.io/node)
 - [https://github.com/nodesource/distributions/blob/master/README.md#debinstall](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
+- 
 ## Articles
 - [Node.js Por Baixo dos Panos - Artigo Lucas Santos](https://dev.to/khaosdoctor/node-js-por-baixo-dos-panos-1-conhecendo-nossas-ferramentas-34b6)
 - [Tutorial DigitalOcean - How To Code in Node.js](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js)
+- [Tao Of Node](https://alexkondov.com/tao-of-node/)
+
 ## Event Loop
 - https://www.origamid.com/slide/javascript-completo-es6/#/0101-javascript-completo-es6/11
 - [Talk #27 - JavaScript Event Loop (Parte 1)](https://www.youtube.com/watch?v=va8-xdxTywU)
