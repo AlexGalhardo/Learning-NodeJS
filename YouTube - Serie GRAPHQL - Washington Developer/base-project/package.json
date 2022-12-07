@@ -16,7 +16,7 @@
   "dependencies": {
     "apollo-server": "^2.11.0",
     "graphql": "^14.6.0",
-    "graphql-tools": "^6.0.8",
+    "graphql-tools": "^6.2.6",
     "knex": "0.21.1",
     "pg": "8.2.1"
   }
