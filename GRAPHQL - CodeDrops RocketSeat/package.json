@@ -21,7 +21,7 @@
     "express-graphql": "^0.12.0",
     "graphql": "^15.5.1",
     "graphql-tools": "^8.2.0",
-    "mongoose": "^5.13.2",
+    "mongoose": "^5.13.15",
     "reflect-metadata": "^0.1.13",
     "tsyringe": "^4.6.0"
   }
