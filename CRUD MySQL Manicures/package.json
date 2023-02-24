@@ -20,7 +20,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "mysql2": "^1.7.0",
-    "sequelize": "^5.18.1"
+    "sequelize": "^6.29.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.2"
