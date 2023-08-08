@@ -8,6 +8,7 @@
 - [Node.js Por Baixo dos Panos - Artigo Lucas Santos](https://dev.to/khaosdoctor/node-js-por-baixo-dos-panos-1-conhecendo-nossas-ferramentas-34b6)
 - [Tutorial DigitalOcean - How To Code in Node.js](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js)
 - [Tao Of Node](https://alexkondov.com/tao-of-node/)
+  [Blog RisingStack](https://blog.risingstack.com/)
 
 ## Event Loop
 - https://www.origamid.com/slide/javascript-completo-es6/#/0101-javascript-completo-es6/11
@@ -133,6 +134,10 @@
 
 ## NPM
 - $ sudo npm install -g npm
+
+### Update all project NPM packages
+- $ npm i -g npm-check-updates
+- $ ncu -u
 
 ## YARN
 - https://yarnpkg.com/getting-started/install
