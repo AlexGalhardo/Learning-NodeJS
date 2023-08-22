@@ -3,19 +3,19 @@
 ## Install Ubuntu
 - [https://snapcraft.io/node](https://snapcraft.io/node)
 - [https://github.com/nodesource/distributions/blob/master/README.md#debinstall](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
-- 
-## Articles
-- [Node.js Por Baixo dos Panos - Artigo Lucas Santos](https://dev.to/khaosdoctor/node-js-por-baixo-dos-panos-1-conhecendo-nossas-ferramentas-34b6)
-- [Tutorial DigitalOcean - How To Code in Node.js](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-node-js)
-- [Tao Of Node](https://alexkondov.com/tao-of-node/)
-  [Blog RisingStack](https://blog.risingstack.com/)
 
-## Event Loop
+
+
+# Event Loop
+![event_loop](https://user-images.githubusercontent.com/19540357/128660447-0b1ef65c-b7b1-4277-b510-5a66b5fc8138.jpg)
+
+https://github.com/AlexGalhardo/Learning-NodeJS/assets/19540357/32ac6d51-8ac6-48cc-a477-682602c9f683
+
 - https://www.origamid.com/slide/javascript-completo-es6/#/0101-javascript-completo-es6/11
 - [Talk #27 - JavaScript Event Loop (Parte 1)](https://www.youtube.com/watch?v=va8-xdxTywU)
 - [Mas que diabos é o loop de eventos? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=0s)
 - [Javascript & Node.js: Do baixo ao alto nível](https://www.youtube.com/watch?v=M6wLBpzSvqw)
-![event_loop](https://user-images.githubusercontent.com/19540357/128660447-0b1ef65c-b7b1-4277-b510-5a66b5fc8138.jpg)
+
 <table>
 <thead>
 <tr>
@@ -103,6 +103,11 @@
 </tbody>
 </table>
 
+## Articles
+- [Node.js Por Baixo dos Panos - Artigo Lucas Santos](https://dev.to/khaosdoctor/node-js-por-baixo-dos-panos-1-conhecendo-nossas-ferramentas-34b6)
+- [Tao Of Node](https://alexkondov.com/tao-of-node/)
+  [Blog RisingStack](https://blog.risingstack.com/)
+
 ## Commands
 - $ npm init
 - $ npm init -y
@@ -135,7 +140,7 @@
 ## NPM
 - $ sudo npm install -g npm
 
-### Update all project NPM packages
+### Update all NPM packages
 - $ npm i -g npm-check-updates
 - $ ncu -u
 
