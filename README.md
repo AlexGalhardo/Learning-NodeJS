@@ -149,6 +149,8 @@ https://github.com/AlexGalhardo/Learning-NodeJS/assets/19540357/32ac6d51-8ac6-48
 - $ sudo npm install -g yarn
 
 ## Modules/Packages
+- Pino Logging
+   - [https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-pino-to-log-node-js-applications/](https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-pino-to-log-node-js-applications/)
 - HTTP Requests
    - [https://www.npmjs.com/package/node-fetch](https://www.npmjs.com/package/node-fetch)
    - [https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
